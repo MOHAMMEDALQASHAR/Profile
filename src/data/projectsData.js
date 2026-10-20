@@ -25,12 +25,12 @@ export const projectsData = [
       "نظام منع التعارض في الأيام والأوقات (Automatic Double-Booking Prevention)",
       "إحصائيات مالية وتقارير أداء دورية (Financial Analytics & Reporting)"
     ],
-    demoUrl: "https://ahla-al-ayyam.vercel.app",
-    githubUrl: "https://github.com/mohamed-taha-alqashar/ahla-al-ayyam-system",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80",
+    demoUrl: "https://salah-ahla-alayam-s4mi.vercel.app/",
+    githubUrl: "https://github.com/MOHAMMEDALQASHAR/ahla-al-ayyam-system",
+    image: "/projects/ahla-al-ayam.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     gallery: [
-      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80",
+      "/projects/ahla-al-ayam.png",
       "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1000&q=80"
     ]
