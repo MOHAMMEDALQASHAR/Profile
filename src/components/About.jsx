@@ -15,7 +15,7 @@ export default function About({ t, lang }) {
             <UserCheck className="w-4 h-4" />
             <span>{t.about.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
             {t.about.subtitle}
           </h2>
         </div>
@@ -43,13 +43,13 @@ export default function About({ t, lang }) {
 
             <div className="flex items-center gap-3 mb-6">
               <span className="w-3 h-8 bg-gradient-to-b from-sky-400 to-indigo-600 rounded-full inline-block" />
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+              <h3 className="text-2xl font-bold text-white">
                 نبذة عني (About Mohamed Taha)
               </h3>
             </div>
 
-            <div className="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-              <p className="font-semibold text-slate-900 dark:text-slate-100 text-lg">
+            <div className="space-y-4 text-slate-300 text-base leading-relaxed">
+              <p className="font-semibold text-white text-lg">
                 {bioInfo.bioText1 || t.about.bioText1}
               </p>
               <p>
@@ -86,7 +86,7 @@ export default function About({ t, lang }) {
         {/* Timeline Section */}
         <div className="mt-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white gradient-text">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white gradient-text">
               {t.about.timelineTitle}
             </h3>
           </div>
@@ -111,7 +111,7 @@ export default function About({ t, lang }) {
                     </span>
                   </div>
 
-                  <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                  <h4 className="text-lg font-bold text-white mb-2">
                     {item.title}
                   </h4>
 

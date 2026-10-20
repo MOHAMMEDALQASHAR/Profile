@@ -14,11 +14,11 @@ export default function WhyMe({ t }) {
             <HelpCircle className="w-4 h-4" />
             <span>{t.whyMe.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             {t.whyMe.subtitle}
           </h2>
           {t.whyMe.desc && (
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
               {t.whyMe.desc}
             </p>
           )}
@@ -37,10 +37,10 @@ export default function WhyMe({ t }) {
                   <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-4">
                     <IconComp className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-bold text-white mb-2">
                     {card.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                     {card.desc}
                   </p>
                 </div>

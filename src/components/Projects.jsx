@@ -90,7 +90,7 @@ export default function Projects({ t, lang }) {
             <FolderGit2 className="w-4 h-4" />
             <span>{t.projects.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             {t.projects.subtitle}
           </h2>
         </div>
@@ -173,11 +173,11 @@ export default function Projects({ t, lang }) {
                   <div>
                     <h3 
                       onClick={() => setQuickPromptProject(project)}
-                      className="text-xl font-extrabold text-slate-900 dark:text-white mb-2 group-hover:text-sky-400 transition-colors cursor-pointer"
+                      className="text-xl font-extrabold text-white mb-2 group-hover:text-sky-400 transition-colors cursor-pointer"
                     >
                       {title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                    <p className="text-slate-300 text-sm leading-relaxed mb-4">
                       {shortDesc}
                     </p>
                   </div>

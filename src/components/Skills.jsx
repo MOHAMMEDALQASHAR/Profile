@@ -67,7 +67,7 @@ export default function Skills({ t }) {
             <Wrench className="w-4 h-4" />
             <span>{t.skills.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             {t.skills.subtitle}
           </h2>
         </div>
@@ -103,7 +103,7 @@ export default function Skills({ t }) {
                     <IconComponent className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 dark:text-white text-base">
+                    <h4 className="font-bold text-white text-base">
                       {skill.name}
                     </h4>
                     <span className="text-xs text-slate-400">

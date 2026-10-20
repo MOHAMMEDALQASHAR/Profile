@@ -13,7 +13,7 @@ export default function Testimonials({ t, lang }) {
             <MessageSquare className="w-4 h-4" />
             <span>{t.testimonials.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             {t.testimonials.subtitle}
           </h2>
         </div>

@@ -114,7 +114,7 @@ export default function Certificates({ t, lang }) {
             <Award className="w-4 h-4" />
             <span>{t.certificates.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             {t.certificates.subtitle}
           </h2>
         </div>
@@ -199,7 +199,7 @@ export default function Certificates({ t, lang }) {
 
                 <div className="p-4 flex-1 flex flex-col justify-between">
                   <div>
-                    <h4 className="font-bold text-slate-900 dark:text-white text-sm line-clamp-2 mb-1 group-hover:text-amber-400 transition-colors">
+                    <h4 className="font-bold text-white text-sm line-clamp-2 mb-1 group-hover:text-amber-400 transition-colors">
                       {title}
                     </h4>
                     <p className="text-[11px] text-slate-400 mb-3">

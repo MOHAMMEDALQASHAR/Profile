@@ -42,12 +42,12 @@ export default function Hero({ t, openCvModal }) {
             </h2>
 
             {/* Name */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 text-slate-900 dark:text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 text-white">
               <span className="gradient-text">{bioInfo.name || t.hero.name}</span>
             </h1>
 
             {/* Subtitle / Role */}
-            <div className="flex items-center gap-2 mb-6 text-xl sm:text-2xl font-bold text-slate-300 dark:text-slate-200">
+            <div className="flex items-center gap-2 mb-6 text-xl sm:text-2xl font-bold text-slate-200">
               <Terminal className="w-6 h-6 text-purple-400 shrink-0" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400">
                 {bioInfo.role || t.hero.role}
@@ -55,7 +55,7 @@ export default function Hero({ t, openCvModal }) {
             </div>
 
             {/* Bio Description */}
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
+            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
               {bioInfo.bioText1 || t.hero.bio}
             </p>
 

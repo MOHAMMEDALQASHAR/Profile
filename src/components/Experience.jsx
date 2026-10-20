@@ -19,7 +19,7 @@ export default function Experience({ t }) {
             <Briefcase className="w-4 h-4" />
             <span>{t.experience.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             {t.experience.subtitle}
           </h2>
         </div>
@@ -43,7 +43,7 @@ export default function Experience({ t }) {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                      <h3 className="text-xl font-bold text-white">
                         {role.title}
                       </h3>
                       <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1 mt-0.5">
@@ -53,7 +53,7 @@ export default function Experience({ t }) {
                     </div>
                   </div>
 
-                  <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                     {role.desc}
                   </p>
                 </div>

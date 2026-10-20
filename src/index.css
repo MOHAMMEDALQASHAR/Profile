@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   font-family: 'Cairo', 'Outfit', system-ui, -apple-system, sans-serif;
-  color-scheme: dark light;
+  color-scheme: dark;
 }
 
 /* Light & Dark Theme Custom Variables */
@@ -22,24 +24,28 @@
 }
 
 .light {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-glass: rgba(255, 255, 255, 0.8);
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --border-color: rgba(0, 0, 0, 0.08);
-  --accent-cyan: #0284c7;
-  --accent-emerald: #059669;
-  --accent-purple: #7c3aed;
-  --shadow-glow: 0 0 25px rgba(2, 132, 199, 0.1);
+  --bg-primary: #0b0f19;
+  --bg-secondary: #111827;
+  --bg-card: rgba(17, 24, 39, 0.7);
+  --bg-glass: rgba(15, 23, 42, 0.65);
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --accent-cyan: #38bdf8;
+  --accent-emerald: #10b981;
+  --accent-purple: #8b5cf6;
+  --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.15);
 }
 
 body {
   background-color: var(--bg-primary);
-  color: var(--text-main);
+  color: #f1f5f9;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
 }
 
 /* Custom Scrollbar */

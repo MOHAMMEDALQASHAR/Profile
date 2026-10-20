@@ -25,7 +25,7 @@ export default function Services({ t }) {
             <Sparkles className="w-4 h-4" />
             <span>{t.services.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             {t.services.subtitle}
           </h2>
         </div>
@@ -43,10 +43,10 @@ export default function Services({ t }) {
                   <div className="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 mb-4 group-hover:scale-110 group-hover:bg-sky-500 group-hover:text-white transition-all">
                     <IconComp className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-sky-400 transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                     {service.desc}
                   </p>
                 </div>

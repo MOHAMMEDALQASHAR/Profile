@@ -12,10 +12,10 @@ export default function Participations({ t }) {
             <Globe className="w-4 h-4" />
             <span>{t.participations.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
             {t.participations.subtitle}
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
             {t.participations.desc}
           </p>
         </div>
@@ -27,10 +27,10 @@ export default function Participations({ t }) {
             <div className="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 mb-4">
               <Globe className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            <h3 className="text-lg font-bold text-white mb-2">
               مشاريع Erasmus+ الأوروبية
             </h3>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               المشاركة في برامج التبادل الشبابي والثقافي وتنمية المهارات القيادية والتواصل الدولي في أوروبا.
             </p>
           </div>
@@ -39,10 +39,10 @@ export default function Participations({ t }) {
             <div className="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 mb-4">
               <Heart className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            <h3 className="text-lg font-bold text-white mb-2">
               العمل التطوعي والمبادرات
             </h3>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               التطوع في تنظيم المؤتمرات والفعاليات الشبابية وإدارة الفرق الإعلامية والتقنية بكفاءة.
             </p>
           </div>
@@ -51,10 +51,10 @@ export default function Participations({ t }) {
             <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-4">
               <Award className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+            <h3 className="text-lg font-bold text-white mb-2">
               التبادل الثقافي والتطوير
             </h3>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               بناء جسور التواصل بين الشباب العربي والدولي لتبادل الخبرات وتطوير المهارات التقنية الحياتية.
             </p>
           </div>
