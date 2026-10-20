@@ -53,10 +53,10 @@ export const galleryData = [
     id: "g6",
     category: "awards",
     title: {
-      ar: "تكريم التفوق البرمجي والابتكار الرقمي",
-      en: "Software Innovation & Achievement Award",
-      tr: "Yazılım İnovasyon Ödülü"
+      ar: "جائزة المركز الثالث في سوق مشاريع البحث والتطوير الدولي (Ar-Ge)",
+      en: "3rd Place Award - International R&D (Ar-Ge) Project Market",
+      tr: "8. Uluslararası Ar-Ge Proje Pazarı Üçüncülük Ödülü"
     },
-    image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=800&q=80"
+    image: "/award-arge.jpg"
   }
 ];
