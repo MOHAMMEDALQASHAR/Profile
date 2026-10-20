@@ -36,12 +36,12 @@ export default function PhotoGallery({ t, lang }) {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-10">
           {categories.map((cat) => (
             <button
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-[11px] sm:text-sm font-bold transition-all ${
                 activeCategory === cat.key
                   ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/20'
                   : 'bg-slate-800/50 text-slate-300 hover:bg-slate-800'
@@ -53,33 +53,37 @@ export default function PhotoGallery({ t, lang }) {
         </div>
 
         {/* Photos Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {filteredPhotos.map((item) => {
             const title = item.title[lang] || item.title.ar;
             return (
               <div
                 key={item.id}
                 onClick={() => setLightboxImg(item)}
-                className="group relative h-64 rounded-3xl overflow-hidden cursor-pointer glass-card border-none shadow-lg"
+                className="group relative h-36 sm:h-64 rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer glass-card border-none shadow-lg"
               >
                 <img
                   src={item.image}
                   alt={title}
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80";
+                  }}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6 flex items-end justify-between gap-1">
                   <div>
-                    <span className="px-2.5 py-1 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-300 text-[10px] font-bold inline-block mb-2 backdrop-blur-md">
+                    <span className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-300 text-[8px] sm:text-[10px] font-bold inline-block mb-1 sm:mb-2 backdrop-blur-md">
                       {item.category.toUpperCase()}
                     </span>
-                    <h4 className="text-white font-bold text-base leading-tight">
+                    <h4 className="text-white font-bold text-xs sm:text-base leading-tight line-clamp-2">
                       {title}
                     </h4>
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-purple-600/80 text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
-                    <ZoomIn className="w-5 h-5" />
+                  <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-purple-600/80 text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-md shrink-0">
+                    <ZoomIn className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
                   </div>
                 </div>
               </div>

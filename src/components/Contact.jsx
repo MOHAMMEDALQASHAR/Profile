@@ -119,7 +119,7 @@ export default function Contact({ t }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Contact Direct Action Buttons */}
-          <div className="lg:col-span-5 flex flex-col gap-3.5">
+          <div className="lg:col-span-5 grid grid-cols-2 lg:grid-cols-1 gap-2.5 sm:gap-3.5">
             {contactChannels.map((c, i) => {
               const IconComp = c.icon;
               return (
@@ -128,24 +128,24 @@ export default function Contact({ t }) {
                   href={c.link}
                   target="_blank"
                   rel="noreferrer"
-                  className={`glass-card p-4 sm:p-5 rounded-2xl flex items-center justify-between ${c.hoverBorder} hover:scale-[1.01] transition-all group`}
+                  className={`glass-card p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-between ${c.hoverBorder} hover:scale-[1.01] transition-all group ${i === 4 ? 'col-span-2 lg:col-span-1' : ''}`}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className={`w-12 h-12 rounded-2xl border flex items-center justify-center shrink-0 ${c.color} group-hover:scale-110 transition-transform`}>
-                      <IconComp className="w-6 h-6" />
+                  <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden">
+                    <div className={`w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl border flex items-center justify-center shrink-0 ${c.color} group-hover:scale-110 transition-transform`}>
+                      <IconComp className="w-4 h-4 sm:w-6 sm:h-6" />
                     </div>
-                    <div>
-                      <h4 className="text-sm sm:text-base font-extrabold text-white group-hover:text-sky-400 transition-colors">
+                    <div className="min-w-0">
+                      <h4 className="text-xs sm:text-base font-extrabold text-white group-hover:text-sky-400 transition-colors truncate">
                         {c.title}
                       </h4>
-                      <span className="text-xs text-slate-400 block mt-0.5">
+                      <span className="text-[10px] sm:text-xs text-slate-400 block mt-0.5 truncate">
                         {c.action}
                       </span>
                     </div>
                   </div>
 
-                  <div className="w-9 h-9 rounded-xl bg-slate-800/60 border border-slate-700/50 flex items-center justify-center text-slate-400 group-hover:text-sky-400 group-hover:border-sky-500/50 group-hover:bg-slate-800 transition-all shrink-0">
-                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-slate-800/60 border border-slate-700/50 flex items-center justify-center text-slate-400 group-hover:text-sky-400 group-hover:border-sky-500/50 group-hover:bg-slate-800 transition-all shrink-0">
+                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </a>
               );

@@ -186,7 +186,7 @@ export const translations = {
     },
     gallery: {
       title: "معرض الصور",
-      subtitle: "صور التخرج، المؤتمرات، الدورات، التطوع، والجائز"
+      subtitle: "صور التخرج، المؤتمرات، الدورات، التطوع، والجوائز"
     },
     aiChatbot: {
       title: "المساعد الذكي",
