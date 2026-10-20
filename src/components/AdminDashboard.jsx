@@ -424,6 +424,41 @@ export default function AdminDashboard({ isOpen, onClose }) {
           {activeTab === 'projects' && (
             <div className="space-y-8">
               
+              {/* Permanent Code Export & Backup Banner */}
+              <div className="p-4 rounded-2xl bg-gradient-to-r from-sky-950/60 to-indigo-950/60 border border-sky-500/30 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <h4 className="text-xs font-bold text-sky-300">تثبيت بيانات وصور المشاريع في كود الموقع الدائم</h4>
+                  <p className="text-[11px] text-slate-400">انسخ بيانات مشاريعك بصورها وروابطها لنقلها إلى كود الموقع لكي تظهر للجميع على أي جوال وجهاز بدون لوحة تحكم.</p>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      navigator.clipboard.writeText(JSON.stringify(projects, null, 2));
+                      showNotification('تم نسخ بيانات المشاريع كاملة! أرسلها لي هنا وسأثبتها فوراً في كود الموقع.');
+                    }}
+                    className="px-3 py-1.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white text-xs font-bold transition-all shadow-md flex items-center gap-1.5"
+                  >
+                    <span>📋 نسخ كود المشاريع</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const blob = new Blob([JSON.stringify(projects, null, 2)], { type: 'application/json' });
+                      const url = URL.createObjectURL(blob);
+                      const a = document.createElement('a');
+                      a.href = url;
+                      a.download = 'projects_data.json';
+                      a.click();
+                      showNotification('تم تحميل ملف projects_data.json');
+                    }}
+                    className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all border border-slate-700 flex items-center gap-1.5"
+                  >
+                    <span>⬇️ تحميل JSON</span>
+                  </button>
+                </div>
+              </div>
+
               {/* Add / Edit Form */}
               <form onSubmit={handleProjectSubmit} className="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
                 <h3 className="text-base font-bold text-white flex items-center gap-2">
