@@ -56,7 +56,7 @@ export default function Hero({ t, openCvModal }) {
 
             {/* Bio Description */}
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
-              {bioInfo.bioText1 || t.hero.bio}
+              {t.hero.bio}
             </p>
 
             {/* CTA Buttons */}

@@ -105,11 +105,22 @@ export function PortfolioProvider({ children }) {
   // Bio & Intro Info State
   const [bioInfo, setBioInfo] = useState(() => {
     const saved = localStorage.getItem('alqashar_bio_info');
-    return saved ? JSON.parse(saved) : {
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (parsed.bioText1 && parsed.bioText1.includes('أنا Mohamed Taha Al-Qashar، مهندس برمجيات يمني')) {
+          parsed.bioText1 = 'متخصص في تطوير تطبيقات الويب، أنظمة الذكاء الاصطناعي، وقواعد البيانات. أسعى لبناء تقنيات تصنع أثرًا حقيقيًا وتلبي تطلعات الأفراد والمؤسسات.';
+        }
+        return parsed;
+      } catch {
+        // fallback
+      }
+    }
+    return {
       name: 'محمد طه القشار',
       role: 'مهندس برمجيات ومطور حلول رقمية',
       university: 'جامعة بارتن - تركيا',
-      bioText1: 'أنا Mohamed Taha Al-Qashar، مهندس برمجيات يمني تخرجت من جامعة بارتن في تركيا. أؤمن بأن البرمجة هي وسيلة لحل المشكلات وصناعة المستقبل.',
+      bioText1: 'متخصص في تطوير تطبيقات الويب، أنظمة الذكاء الاصطناعي، وقواعد البيانات. أسعى لبناء تقنيات تصنع أثرًا حقيقيًا وتلبي تطلعات الأفراد والمؤسسات.',
       bioText2: 'خلال رحلتي الأكاديمية والعملية عملت على تطوير العديد من المشاريع باستخدام أحدث التقنيات وشاركت في برامج شبابية دولية وErasmus+.',
       cvUrl: '',
       cvFileName: ''
