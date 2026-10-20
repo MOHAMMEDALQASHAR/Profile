@@ -7,7 +7,7 @@ export const galleryData = [
       en: "Graduation Ceremony - Bartın University, Turkey",
       tr: "Mezuniyet Töreni - Bartın Üniversitesi"
     },
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80"
+    image: "/graduation-bartin.jpg"
   },
   {
     id: "g2",
