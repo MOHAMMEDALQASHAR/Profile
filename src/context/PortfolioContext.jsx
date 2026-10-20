@@ -86,6 +86,9 @@ export function PortfolioProvider({ children }) {
         if (!parsed.instagram) {
           parsed.instagram = 'alqashar123';
         }
+        if (!parsed.youtube) {
+          parsed.youtube = 'https://youtube.com/@alqashar?si=BLeQdUXFnnm4Qy0c';
+        }
         delete parsed.telegram;
         return parsed;
       } catch {
@@ -98,7 +101,8 @@ export function PortfolioProvider({ children }) {
       whatsapp: '905526909944',
       linkedin: 'mohammed-taha-alqashar-9579422b6',
       github: 'MOHAMMEDALQASHAR',
-      instagram: 'alqashar123'
+      instagram: 'alqashar123',
+      youtube: 'https://youtube.com/@alqashar?si=BLeQdUXFnnm4Qy0c'
     };
   });
 

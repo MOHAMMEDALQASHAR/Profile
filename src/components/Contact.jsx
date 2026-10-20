@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { usePortfolio } from '../context/PortfolioContext';
-import { LinkedinIcon, GithubIcon, InstagramIcon } from './Icons';
+import { LinkedinIcon, GithubIcon, InstagramIcon, YoutubeIcon } from './Icons';
 import { Mail, Phone, Send, CheckCircle2, Loader2, AlertCircle, ExternalLink } from 'lucide-react';
 
 export default function Contact({ t }) {
@@ -98,6 +98,16 @@ export default function Contact({ t }) {
       icon: InstagramIcon,
       color: "text-pink-400 border-pink-500/30 bg-pink-500/10",
       hoverBorder: "hover:border-pink-500/50"
+    },
+    {
+      title: "YouTube",
+      action: "مشاهدة القناة والفيديوهات",
+      link: contactInfo.youtube && contactInfo.youtube.startsWith('http')
+        ? contactInfo.youtube
+        : `https://youtube.com/@${contactInfo.youtube ? contactInfo.youtube.replace('@', '') : 'alqashar'}?si=BLeQdUXFnnm4Qy0c`,
+      icon: YoutubeIcon,
+      color: "text-red-400 border-red-500/30 bg-red-500/10",
+      hoverBorder: "hover:border-red-500/50"
     }
   ];
 
@@ -128,7 +138,7 @@ export default function Contact({ t }) {
                   href={c.link}
                   target="_blank"
                   rel="noreferrer"
-                  className={`glass-card p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-between ${c.hoverBorder} hover:scale-[1.01] transition-all group ${i === 4 ? 'col-span-2 lg:col-span-1' : ''}`}
+                  className={`glass-card p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-between ${c.hoverBorder} hover:scale-[1.01] transition-all group`}
                 >
                   <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden">
                     <div className={`w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl border flex items-center justify-center shrink-0 ${c.color} group-hover:scale-110 transition-transform`}>

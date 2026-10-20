@@ -62,11 +62,11 @@ export default function AiChatbot({ isOpen, onClose, t, lang }) {
     // Contact & Hiring inquiry
     if (q.includes('تواصل') || q.includes('إيميل') || q.includes('هاتف') || q.includes('توظيف') || q.includes('contact') || q.includes('email') || q.includes('hire') || q.includes('iletisim')) {
       if (lang === 'en') {
-        return "You can get in touch directly with Eng. Mohamed via:\n- **Email**: alqashar2002@gmail.com\n- **LinkedIn**: linkedin.com/in/mohammed-taha-alqashar-9579422b6\n- **GitHub**: github.com/MOHAMMEDALQASHAR\n- **Instagram**: instagram.com/alqashar123\n- **WhatsApp/Phone**: Available in the contact section below!";
+        return "You can get in touch directly with Eng. Mohamed via:\n- **Email**: alqashar2002@gmail.com\n- **LinkedIn**: linkedin.com/in/mohammed-taha-alqashar-9579422b6\n- **GitHub**: github.com/MOHAMMEDALQASHAR\n- **Instagram**: instagram.com/alqashar123\n- **YouTube**: youtube.com/@alqashar\n- **WhatsApp/Phone**: Available in the contact section below!";
       } else if (lang === 'tr') {
-        return "Müh. Mohamed ile doğrudan iletişime geçebilirsiniz:\n- **E-posta**: alqashar2002@gmail.com\n- **LinkedIn**: linkedin.com/in/mohammed-taha-alqashar-9579422b6\n- **GitHub**: github.com/MOHAMMEDALQASHAR\n- **Instagram**: instagram.com/alqashar123\n- **WhatsApp**: Aşağıdaki iletişim bölümünden ulaşabilirsiniz!";
+        return "Müh. Mohamed ile doğrudan iletişime geçebilirsiniz:\n- **E-posta**: alqashar2002@gmail.com\n- **LinkedIn**: linkedin.com/in/mohammed-taha-alqashar-9579422b6\n- **GitHub**: github.com/MOHAMMEDALQASHAR\n- **Instagram**: instagram.com/alqashar123\n- **YouTube**: youtube.com/@alqashar\n- **WhatsApp**: Aşağıdaki iletişim bölümünden ulaşabilirsiniz!";
       } else {
-        return "يمكنك التواصل المباشر مع المهندس محمد طه القشار عبر:\n- **البريد الإلكتروني**: alqashar2002@gmail.com\n- **LinkedIn**: linkedin.com/in/mohammed-taha-alqashar-9579422b6\n- **GitHub**: github.com/MOHAMMEDALQASHAR\n- **Instagram**: instagram.com/alqashar123\n- **الواتساب**: متوفر في قسم التواصل بالأسفل!";
+        return "يمكنك التواصل المباشر مع المهندس محمد طه القشار عبر:\n- **البريد الإلكتروني**: alqashar2002@gmail.com\n- **LinkedIn**: linkedin.com/in/mohammed-taha-alqashar-9579422b6\n- **GitHub**: github.com/MOHAMMEDALQASHAR\n- **Instagram**: instagram.com/alqashar123\n- **YouTube**: youtube.com/@alqashar\n- **الواتساب**: متوفر في قسم التواصل بالأسفل!";
       }
     }
 
