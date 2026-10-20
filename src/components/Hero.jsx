@@ -9,7 +9,6 @@ import {
   Globe2, 
   Sparkles,
   Heart,
-  Terminal,
   Cpu,
   CheckCircle2
 } from 'lucide-react';
@@ -30,12 +29,6 @@ export default function Hero({ t, openCvModal }) {
           {/* Main Content (Text & CTAs) */}
           <div className="flex-1 text-center lg:text-start flex flex-col items-center lg:items-start">
             
-            {/* Status Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/80 dark:bg-slate-900/90 bg-white/90 border border-sky-500/30 text-sky-400 text-xs sm:text-sm font-bold shadow-md shadow-sky-500/10 mb-6 animate-float">
-              <Sparkles className="w-4 h-4 text-sky-400 animate-spin" style={{ animationDuration: '8s' }} />
-              <span>{t.hero.badge}</span>
-            </div>
-
             {/* Greeting */}
             <h2 className="text-lg sm:text-xl font-bold text-slate-400 dark:text-slate-400 mb-2">
               {t.hero.greeting}
@@ -47,8 +40,7 @@ export default function Hero({ t, openCvModal }) {
             </h1>
 
             {/* Subtitle / Role */}
-            <div className="flex items-center gap-2 mb-6 text-xl sm:text-2xl font-bold text-slate-200">
-              <Terminal className="w-6 h-6 text-purple-400 shrink-0" />
+            <div className="mb-6 text-xl sm:text-2xl font-bold text-slate-200">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400">
                 {bioInfo.role || t.hero.role}
               </span>
