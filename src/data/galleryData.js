@@ -23,11 +23,11 @@ export const galleryData = [
     id: "g3",
     category: "volunteering",
     title: {
-      ar: "تنظيم الأنشطة الشبابية الدولية والتطوعية",
-      en: "Youth International Volunteering & Event Leadership",
-      tr: "Uluslararası Gençlik Gönüllülük Etkinliği"
+      ar: "التطوع مع حركة Damla الدولية في أغري - تركيا",
+      en: "Volunteering with Damla International Movement in Ağrı, Turkey",
+      tr: "Damla Gönüllülük Hareketi - Ağrı, Türkiye"
     },
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80"
+    image: "/volunteering-damla.jpg"
   },
   {
     id: "g4",
