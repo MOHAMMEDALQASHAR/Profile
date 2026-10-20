@@ -154,7 +154,7 @@ export default function Certificates({ t, lang }) {
         </div>
 
         {/* Certificates Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {filteredCerts.map((cert, index) => {
             const title = getLoc(cert.title);
             const issuer = getLoc(cert.issuer);
@@ -165,9 +165,9 @@ export default function Certificates({ t, lang }) {
               <div
                 key={keyVal}
                 onClick={() => handleOpenCert(cert)}
-                className="glass-card rounded-2xl overflow-hidden cursor-pointer group hover:border-amber-400/50 transition-all flex flex-col justify-between"
+                className="glass-card rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer group hover:border-amber-400/50 transition-all flex flex-col justify-between"
               >
-                <div className="relative h-44 w-full bg-slate-900 overflow-hidden">
+                <div className="relative h-24 sm:h-44 w-full bg-slate-900 overflow-hidden">
                   <img
                     src={cert.image}
                     alt={title}
@@ -176,43 +176,43 @@ export default function Certificates({ t, lang }) {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
                   
                   {/* Badge */}
-                  <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-[10px] font-bold backdrop-blur-md">
+                  <span className="absolute top-2 right-2 sm:top-3 sm:right-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-[9px] sm:text-[10px] font-bold backdrop-blur-md">
                     {cert.badge || 'شهادة'}
                   </span>
 
                   {/* Multi-Photos Gallery Indicator Badge (نفس المشاريع) */}
                   {hasGallery && (
-                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-amber-600/90 backdrop-blur-md border border-amber-400/40 text-white text-[10px] font-extrabold flex items-center gap-1 shadow-md">
-                      <Images className="w-3 h-3" />
-                      <span>{cert.gallery.length} {t.certificates.photosCount || 'صور'}</span>
+                    <span className="absolute top-2 left-2 sm:top-3 sm:left-3 px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-amber-600/90 backdrop-blur-md border border-amber-400/40 text-white text-[8px] sm:text-[10px] font-extrabold flex items-center gap-0.5 sm:gap-1 shadow-md">
+                      <Images className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                      <span>{cert.gallery.length} <span className="hidden sm:inline">{t.certificates.photosCount || 'صور'}</span></span>
                     </span>
                   )}
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-slate-950/60 backdrop-blur-xs">
-                    <span className="px-3.5 py-1.5 rounded-xl bg-amber-400 text-slate-950 text-xs font-extrabold shadow-lg flex items-center gap-1.5 transform group-hover:scale-105 transition-transform">
-                      <Eye className="w-3.5 h-3.5" />
-                      <span>معاينة الشهادة والصور</span>
+                    <span className="px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg sm:rounded-xl bg-amber-400 text-slate-950 text-[10px] sm:text-xs font-extrabold shadow-lg flex items-center gap-1 sm:gap-1.5 transform group-hover:scale-105 transition-transform">
+                      <Eye className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      <span>معاينة</span>
                     </span>
                   </div>
                 </div>
 
-                <div className="p-4 flex-1 flex flex-col justify-between">
+                <div className="p-2.5 sm:p-4 flex-1 flex flex-col justify-between">
                   <div>
-                    <h4 className="font-bold text-white text-sm line-clamp-2 mb-1 group-hover:text-amber-400 transition-colors">
+                    <h4 className="font-bold text-white text-xs sm:text-sm line-clamp-2 mb-1 group-hover:text-amber-400 transition-colors leading-tight">
                       {title}
                     </h4>
-                    <p className="text-[11px] text-slate-400 mb-3">
+                    <p className="text-[9px] sm:text-[11px] text-slate-400 mb-2 sm:mb-3 line-clamp-1">
                       {issuer} ({cert.date})
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-700/30 flex items-center justify-between text-xs font-bold text-amber-400">
+                  <div className="pt-2 sm:pt-3 border-t border-slate-700/30 flex items-center justify-between text-[10px] sm:text-xs font-bold text-amber-400">
                     <span className="flex items-center gap-1">
-                      <FileText className="w-3.5 h-3.5" />
+                      <FileText className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                       معاينة / PDF
                     </span>
-                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </div>
 

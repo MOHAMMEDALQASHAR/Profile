@@ -113,7 +113,7 @@ export default function Projects({ t, lang }) {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
           {filteredProjects.map((project, index) => {
             const title = getLoc(project.title);
             const shortDesc = getLoc(project.shortDesc);
@@ -124,12 +124,12 @@ export default function Projects({ t, lang }) {
             return (
               <div 
                 key={keyVal}
-                className="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-sky-500/50 transition-all duration-300 shadow-xl"
+                className="glass-card rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-sky-500/50 transition-all duration-300 shadow-xl"
               >
                 {/* Project Image Header */}
                 <div 
                   onClick={() => setQuickPromptProject(project)}
-                  className="relative h-60 w-full overflow-hidden bg-slate-900 cursor-pointer group/img"
+                  className="relative h-28 sm:h-56 w-full overflow-hidden bg-slate-900 cursor-pointer group/img"
                 >
                   <img 
                     src={project.image} 
@@ -139,68 +139,71 @@ export default function Projects({ t, lang }) {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
                   
                   {/* Category Badge */}
-                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700 text-sky-400 text-xs font-bold">
+                  <span className="absolute top-2 right-2 sm:top-4 sm:right-4 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700 text-sky-400 text-[9px] sm:text-xs font-bold">
                     {(project.category || 'WEB').toUpperCase()}
                   </span>
 
                   {/* Media Indicator Badges */}
-                  <div className="absolute top-4 left-4 flex items-center gap-1.5">
+                  <div className="absolute top-2 left-2 sm:top-4 sm:left-4 flex items-center gap-1 sm:gap-1.5">
                     {hasGallery && (
-                      <span className="px-2.5 py-1 rounded-full bg-amber-600/90 backdrop-blur-md border border-amber-400/40 text-white text-[10px] font-extrabold flex items-center gap-1">
-                        <Images className="w-3 h-3" />
+                      <span className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-amber-600/90 backdrop-blur-md border border-amber-400/40 text-white text-[8px] sm:text-[10px] font-extrabold flex items-center gap-0.5 sm:gap-1">
+                        <Images className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                         <span>{project.gallery.length} صور</span>
                       </span>
                     )}
                     {hasVideo && (
-                      <span className="px-2.5 py-1 rounded-full bg-purple-600/90 backdrop-blur-md border border-purple-400/40 text-white text-[10px] font-extrabold flex items-center gap-1">
-                        <Video className="w-3 h-3" />
-                        <span>فيديو</span>
+                      <span className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-purple-600/90 backdrop-blur-md border border-purple-400/40 text-white text-[8px] sm:text-[10px] font-extrabold flex items-center gap-0.5 sm:gap-1">
+                        <Video className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                        <span className="hidden sm:inline">فيديو</span>
                       </span>
                     )}
                   </div>
 
                   {/* Overlay Quick Launch Hint */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity bg-slate-950/60 backdrop-blur-xs">
-                    <span className="px-4 py-2 rounded-xl bg-sky-500 text-white text-xs font-bold shadow-lg shadow-sky-500/30 flex items-center gap-2 transform group-hover/img:scale-105 transition-transform">
-                      <Eye className="w-4 h-4" />
+                    <span className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl bg-sky-500 text-white text-[10px] sm:text-xs font-bold shadow-lg shadow-sky-500/30 flex items-center gap-1.5 sm:gap-2 transform group-hover/img:scale-105 transition-transform">
+                      <Eye className="w-3 h-3 sm:w-4 sm:h-4" />
                       <span>{t.projects.mediaSelectTitle || 'خيارات المعاينة'}</span>
                     </span>
                   </div>
                 </div>
 
                 {/* Project Body */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                <div className="p-3 sm:p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <h3 
                       onClick={() => setQuickPromptProject(project)}
-                      className="text-xl font-extrabold text-white mb-2 group-hover:text-sky-400 transition-colors cursor-pointer"
+                      className="text-xs sm:text-xl font-extrabold text-white mb-1 sm:mb-2 line-clamp-1 group-hover:text-sky-400 transition-colors cursor-pointer"
                     >
                       {title}
                     </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                    <p className="text-slate-300 text-[10px] sm:text-sm leading-snug sm:leading-relaxed mb-2 sm:mb-4 line-clamp-2">
                       {shortDesc}
                     </p>
                   </div>
 
                   {/* Tech Stack Badges */}
-                  <div className="flex flex-wrap gap-1.5 mb-6">
-                    {(project.tech || []).map((tItem, i) => (
-                      <span key={i} className="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/50 text-[11px] font-semibold text-slate-300">
+                  <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-2.5 sm:mb-6">
+                    {(project.tech || []).slice(0, 3).map((tItem, i) => (
+                      <span key={i} className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-md sm:rounded-lg bg-slate-800/80 border border-slate-700/50 text-[9px] sm:text-[11px] font-semibold text-slate-300">
                         {getLoc(tItem)}
                       </span>
                     ))}
+                    {(project.tech || []).length > 3 && (
+                      <span className="px-1.5 py-0.5 rounded-md bg-slate-800/50 text-[9px] font-semibold text-slate-400 sm:hidden">
+                        +{project.tech.length - 3}
+                      </span>
+                    )}
                   </div>
 
                   {/* Quick Action Trigger Button */}
                   <button
                     onClick={() => setQuickPromptProject(project)}
-                    className="w-full py-3 px-4 mb-3 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-extrabold text-xs shadow-md shadow-sky-500/20 transition-all flex items-center justify-center gap-2"
+                    className="w-full py-2 sm:py-3 px-2 sm:px-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-extrabold text-[10px] sm:text-xs shadow-md shadow-sky-500/20 transition-all flex items-center justify-center gap-1 sm:gap-2"
                   >
-                    <Sparkles className="w-4 h-4" />
-                    <span>{t.projects.mediaSelectTitle || 'خيارات العرض والمعاينة السريعة'}</span>
+                    <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <span>{t.projects.mediaSelectTitle || 'خيارات المعاينة'}</span>
                   </button>
-
-
 
                 </div>
 
