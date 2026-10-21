@@ -49,6 +49,19 @@ export function PortfolioProvider({ children }) {
     if (!Array.isArray(certList)) return initialCertificates;
     return certList.map(c => {
       const matchInit = initialCertificates.find(init => init.id === (c.customId || c.id));
+      if (!matchInit) return c;
+      if (matchInit.id === 'cert-2') {
+        return {
+          ...c,
+          title: matchInit.title,
+          issuer: matchInit.issuer,
+          badge: matchInit.badge,
+          date: matchInit.date,
+          pdfUrl: matchInit.pdfUrl,
+          image: matchInit.image,
+          gallery: matchInit.gallery
+        };
+      }
       const gallery = (c.gallery && c.gallery.length > 0)
         ? c.gallery
         : (matchInit?.gallery || []);

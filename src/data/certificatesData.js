@@ -21,20 +21,23 @@ export const certificatesData = [
   {
     id: "cert-2",
     title: {
-      ar: "مشارك في برنامج Erasmus+ للتبادل الشبابي",
-      en: "Erasmus+ Youth Exchange & Mobility Program",
-      tr: "Erasmus+ Gençlik Değişimi Programı"
+      ar: "شهادة Youthpass - قمة شباب منظمات الإغاثة الإنسانية (أنقرة)",
+      en: "Youthpass Certificate - Humanitarian Aid Organizations Youth Summit (Ankara)",
+      tr: "Youthpass Sertifikası - İnsani Yardım Kuruluşları Gençlik Zirvesi"
     },
-    issuer: "Erasmus+ European Union",
+    issuer: "الاتحاد الأوروبي Erasmus+ & جمعية Genç Safa",
     date: "2025",
     category: "erasmus",
-    pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80",
+    pdfUrl: "https://www.youthpass.eu/verify",
+    image: "/erasmus-certificate.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80"
+      "/erasmus-youth-summit.jpg",
+      "/erasmus-certificate.jpg",
+      "/erasmus-summit-stage.jpg",
+      "/erasmus-summit-group.jpg",
+      "/erasmus-summit-workshop.jpg"
     ],
-    badge: "برنامج دولي"
+    badge: "Erasmus+ Youthpass"
   },
   {
     id: "cert-3",

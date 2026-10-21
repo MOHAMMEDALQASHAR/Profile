@@ -13,11 +13,11 @@ export const galleryData = [
     id: "g2",
     category: "conferences",
     title: {
-      ar: "المشاركة في مؤتمر البرمجيات والتقنية الدولي",
-      en: "International Software & Tech Conference",
-      tr: "Uluslararası Yazılım ve Teknoloji Konferansı"
+      ar: "المشاركة في قمة شباب منظمات الإغاثة الإنسانية (أنقرة) - برنامج Erasmus+",
+      en: "Humanitarian Aid Organizations Youth Summit (Ankara) - Erasmus+ Project",
+      tr: "İnsani Yardım Kuruluşları Gençlik Zirvesi (Ankara) - Erasmus+ Projesi"
     },
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
+    image: "/erasmus-youth-summit.jpg"
   },
   {
     id: "g3",
