@@ -29,26 +29,7 @@ export const galleryData = [
     },
     image: "/volunteering-damla.jpg"
   },
-  {
-    id: "g4",
-    category: "courses",
-    title: {
-      ar: "ورشة عمل الذكاء الاصطناعي والرؤية الحاسوبية",
-      en: "AI & Computer Vision Workshop",
-      tr: "Yapay Zeka Çalıştayı"
-    },
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: "g5",
-    category: "projects",
-    title: {
-      ar: "اختبار وتطبيق نظام الحضور الذكي بالذكاء الاصطناعي",
-      en: "Testing Smart AI Attendance System with Raspberry Pi",
-      tr: "Raspberry Pi Yapay Zeka Devam Sistemi Testi"
-    },
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-  },
+
   {
     id: "g6",
     category: "awards",

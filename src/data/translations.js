@@ -128,7 +128,7 @@ export const translations = {
     },
     certificates: {
       title: "الشهادات",
-      subtitle: "+30 شهادة ودورة حصلت عليها خلال مسيرتي",
+      subtitle: "",
       searchPlaceholder: "ابحث في الشهادات...",
       viewPdf: "عرض وتحميل PDF",
       modalClose: "إغلاق المعاينة",
@@ -354,7 +354,7 @@ export const translations = {
     },
     certificates: {
       title: "Certificates",
-      subtitle: "+30 verified certifications in engineering, AI, and leadership",
+      subtitle: "",
       searchPlaceholder: "Search certificates...",
       viewPdf: "View & Download PDF",
       modalClose: "Close",
@@ -580,7 +580,7 @@ export const translations = {
     },
     certificates: {
       title: "Sertifikalar",
-      subtitle: "30'dan fazla onaylı sertifika",
+      subtitle: "",
       searchPlaceholder: "Sertifika ara...",
       viewPdf: "İndir / İncele",
       modalClose: "Kapat",

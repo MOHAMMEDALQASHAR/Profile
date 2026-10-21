@@ -109,14 +109,16 @@ export default function Certificates({ t, lang }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs sm:text-sm font-bold">
             <Award className="w-4 h-4" />
             <span>{t.certificates.title}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-            {t.certificates.subtitle}
-          </h2>
+          {t.certificates.subtitle ? (
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">
+              {t.certificates.subtitle}
+            </h2>
+          ) : null}
         </div>
 
         {/* Search & Filters */}

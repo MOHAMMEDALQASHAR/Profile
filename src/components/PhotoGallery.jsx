@@ -6,15 +6,15 @@ export default function PhotoGallery({ t, lang }) {
   const [activeCategory, setActiveCategory] = useState('all');
   const [lightboxImg, setLightboxImg] = useState(null);
 
-  const categories = [
+  const allCategories = [
     { key: 'all', label: 'الكل' },
     { key: 'graduation', label: 'التخرج' },
     { key: 'conferences', label: 'المؤتمرات' },
     { key: 'volunteering', label: 'التطوع' },
-    { key: 'courses', label: 'الدورات' },
-    { key: 'projects', label: 'المشاريع' },
     { key: 'awards', label: 'الجوائز' }
   ];
+
+  const categories = allCategories.filter(cat => cat.key === 'all' || galleryData.some(g => g.category === cat.key));
 
   const filteredPhotos = activeCategory === 'all'
     ? galleryData
