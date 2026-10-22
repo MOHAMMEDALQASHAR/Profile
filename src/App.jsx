@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Certificates from './components/Certificates';
 import Participations from './components/Participations';
 import Services from './components/Services';
 import PhotoGallery from './components/PhotoGallery';
@@ -76,7 +75,6 @@ export default function App() {
         <Hero t={t} openCvModal={() => setIsCvModalOpen(true)} />
         <Experience t={t} />
         <Projects t={t} lang={lang} />
-        <Certificates t={t} lang={lang} />
         <Participations t={t} />
         <Services t={t} />
         <PhotoGallery t={t} lang={lang} />

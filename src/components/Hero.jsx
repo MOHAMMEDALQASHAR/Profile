@@ -139,7 +139,7 @@ export default function Hero({ t, openCvModal }) {
         </div>
 
         {/* Quick Highlights Counter Grid */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           
           <div className="glass-card p-4 rounded-2xl flex flex-col items-center text-center">
             <GraduationCap className="w-7 h-7 text-sky-400 mb-2" />
@@ -151,12 +151,6 @@ export default function Hero({ t, openCvModal }) {
             <Cpu className="w-7 h-7 text-purple-400 mb-2" />
             <span className="text-xl font-extrabold text-white gradient-text">+{projects.length}</span>
             <span className="text-xs text-slate-400 mt-0.5">{t.hero.stats.projects}</span>
-          </div>
-
-          <div className="glass-card p-4 rounded-2xl flex flex-col items-center text-center">
-            <Award className="w-7 h-7 text-amber-400 mb-2" />
-            <span className="text-xl font-extrabold text-white gradient-text">+{certificates.length}</span>
-            <span className="text-xs text-slate-400 mt-0.5">{t.hero.stats.certificates}</span>
           </div>
 
           <div className="glass-card p-4 rounded-2xl flex flex-col items-center text-center">

@@ -46,7 +46,6 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
     { href: "#about", label: t.nav.about },
     { href: "#experience", label: t.nav.experience },
     { href: "#projects", label: t.nav.projects },
-    { href: "#certificates", label: t.nav.certificates },
     { href: "#services", label: t.nav.services },
     { href: "#contact", label: t.nav.contact },
   ];
