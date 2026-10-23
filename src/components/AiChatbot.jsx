@@ -40,11 +40,11 @@ export default function AiChatbot({ isOpen, onClose, t, lang }) {
     // Education & Certificates inquiry
     if (q.includes('دراسة') || q.includes('جامعة') || q.includes('شهادة') || q.includes('تخرج') || q.includes('education') || q.includes('university') || q.includes('degree') || q.includes('mezun') || q.includes('bartın')) {
       if (lang === 'en') {
-        return "Mohamed graduated with a B.Sc. in **Software Engineering** from **Bartın University** in Turkey. He also holds 30+ verified certifications in AI, ASP.NET Core, FastAPI, React, and Erasmus+ Youth Leadership.";
+        return "Mohamed is a **Computer Engineer** and graduated with a B.Sc. in **Software Engineering** from **Bartın University** in Turkey. He specializes in Web Development, AI, and Databases.";
       } else if (lang === 'tr') {
-        return "Mohamed, Türkiye'deki **Bartın Üniversitesi Yazılım Mühendisliği** bölümünden başarıyla mezun olmuştur. Ayrıca yapay zeka, web geliştirme ve Erasmus+ liderlik konularında 30'dan fazla sertifikaya sahiptir.";
+        return "Mohamed, **Bilgisayar Mühendisi** olup Türkiye'deki **Bartın Üniversitesi Yazılım Mühendisliği** bölümünden başarıyla mezun olmuştur. Web geliştirme, yapay zeka ve veritabanı alanlarında uzmanlaşmıştır.";
       } else {
-        return "محمد طه القشار خريج **هندسة البرمجيات من جامعة بارتن في تركيا (Bartın Üniversitesi)**. كما أنه حاصل على أكثر من 30 شهادة ودورة معتمدة في الذكاء الاصطناعي، ASP.NET Core، FastAPI، وتطوير الويب والقيادة.";
+        return "محمد طه القشار **مهندس حاسوب** وخريج **هندسة البرمجيات من جامعة بارتن في تركيا (Bartın Üniversitesi)** ومطور برمجيات وحلول رقمية، متخصص في تطوير تطبيقات الويب، أنظمة الذكاء الاصطناعي، وقواعد البيانات.";
       }
     }
 

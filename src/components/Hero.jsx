@@ -129,7 +129,7 @@ export default function Hero({ t, openCvModal }) {
               {/* Name card below */}
               <div className="mt-6 px-6 py-3 rounded-2xl bg-slate-900/80 border border-slate-700/50 backdrop-blur-md shadow-xl text-center">
                 <h4 className="font-extrabold text-white text-base">محمد طه القشار</h4>
-                <span className="text-xs text-sky-400 font-semibold">مهندس برمجيات • جامعة بارتن 🎓</span>
+                <span className="text-xs text-sky-400 font-semibold">مهندس حاسوب • جامعة بارتن 🎓</span>
               </div>
 
             </div>
