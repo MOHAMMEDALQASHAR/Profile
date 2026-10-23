@@ -100,7 +100,7 @@ export default function CvModal({ isOpen, onClose, t, lang }) {
               <span>التعليم الأكاديمي والنبذة (Education & Bio)</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-2">
-              مهندس حاسوب وخريج **هندسة البرمجيات من جامعة بارتن في تركيا (Bartın Üniversitesi)**. متخصص في تطوير الويب والذكاء الاصطناعي وقواعد البيانات، متمكن من لغات البرمجة C#, Java, Python, JavaScript, PHP, SQL وتطوير الأنظمة المتكاملة.
+              مهندس حاسوب وخريج **هندسة الحاسوب من جامعة بارتن في تركيا (Bartın Üniversitesi)**. متخصص في تطوير الويب والذكاء الاصطناعي وقواعد البيانات، متمكن من لغات البرمجة C#, Java, Python, JavaScript, PHP, SQL وتطوير الأنظمة المتكاملة.
             </p>
           </div>
 

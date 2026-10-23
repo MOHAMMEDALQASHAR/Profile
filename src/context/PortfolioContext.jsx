@@ -131,6 +131,10 @@ export function PortfolioProvider({ children }) {
         if (!parsed.role || parsed.role === 'مهندس برمجيات ومطور حلول رقمية') {
           parsed.role = 'مهندس حاسوب ومطور برمجيات وحلول رقمية';
         }
+        if (!parsed.cvUrl || parsed.cvUrl === '') {
+          parsed.cvUrl = '/cv.pdf';
+          parsed.cvFileName = 'Mohamed_Taha_Alqashar_CV.pdf';
+        }
         return parsed;
       } catch {
         // fallback
@@ -142,8 +146,8 @@ export function PortfolioProvider({ children }) {
       university: 'جامعة بارتن - تركيا',
       bioText1: 'متخصص في تطوير تطبيقات الويب، أنظمة الذكاء الاصطناعي، وقواعد البيانات. أسعى لبناء تقنيات تصنع أثرًا حقيقيًا وتلبي تطلعات الأفراد والمؤسسات.',
       bioText2: 'خلال رحلتي الأكاديمية والعملية عملت على تطوير العديد من المشاريع باستخدام أحدث التقنيات وشاركت في برامج شبابية دولية وErasmus+.',
-      cvUrl: '',
-      cvFileName: ''
+      cvUrl: '/cv.pdf',
+      cvFileName: 'Mohamed_Taha_Alqashar_CV.pdf'
     };
   });
 

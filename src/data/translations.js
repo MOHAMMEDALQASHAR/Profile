@@ -25,7 +25,7 @@ export const translations = {
       btnCv: "تحميل السيرة الذاتية",
       btnContact: "تواصل معي",
       stats: {
-        degree: "خريج هندسة برمجيات",
+        degree: "خريج هندسة حاسوب",
         university: "جامعة بارتن - تركيا",
         projects: "+40 مشروعًا برمجيًا",
         certificates: "+30 شهادة ودورة",
@@ -37,14 +37,14 @@ export const translations = {
     about: {
       title: "من أنا؟",
       subtitle: "شغف بالابتكار وسعي مستمر للتميز التقني",
-      bioText1: "أنا Mohamed Taha Al-Qashar (محمد طه القشار)، مهندس حاسوب وخريج هندسة برمجيات من جامعة بارتن في تركيا. أؤمن بأن البرمجة ليست مجرد كتابة أكواد، بل هي وسيلة لحل المشكلات وصناعة المستقبل.",
+      bioText1: "أنا Mohamed Taha Al-Qashar (محمد طه القشار)، مهندس حاسوب وخريج هندسة حاسوب من جامعة بارتن في تركيا. أؤمن بأن البرمجة ليست مجرد كتابة أكواد، بل هي وسيلة لحل المشكلات وصناعة المستقبل.",
       bioText2: "خلال رحلتي الأكاديمية والعملية عملت على تطوير العديد من المشاريع باستخدام أحدث التقنيات، وشاركت في برامج شبابية دولية، ومبادرات تطوعية، ومشاريع تقنية متنوعة، مما أكسبني خبرة في العمل الجماعي، وإدارة المشاريع، وتصميم الأنظمة البرمجية.",
       bioText3: "أسعى دائمًا إلى تطوير نفسي، وتعلم التقنيات الحديثة، والمساهمة في بناء حلول تقنية تخدم المجتمع.",
       timelineTitle: "رحلتي الأكاديمية والمهنية",
       timeline: [
         {
           year: "2026",
-          title: "تخرج في هندسة البرمجيات",
+          title: "تخرج في هندسة الحاسوب",
           institution: "جامعة بارتن - تركيا (Bartın Üniversitesi)",
           desc: "إتمام مرحلة البكالوريوس بنجاح مع إنجاز مشاريع تخرج متميزة في الذكاء الاصطناعي وأنظمة الويب."
         },
@@ -251,7 +251,7 @@ export const translations = {
       btnCv: "Download CV",
       btnContact: "Get in Touch",
       stats: {
-        degree: "B.Sc. Software Engineering Graduate",
+        degree: "B.Sc. Computer Engineering Graduate",
         university: "Bartın University - Turkey",
         projects: "+40 Software Projects",
         certificates: "+30 Certifications",
@@ -263,14 +263,14 @@ export const translations = {
     about: {
       title: "About Me",
       subtitle: "Passion for Innovation & Engineering Excellence",
-      bioText1: "I am Mohamed Taha Al-Qashar, a Computer Engineer and Software Engineering graduate from Bartın University in Turkey. I believe coding is not just writing lines of syntax, but a problem-solving catalyst for shaping the future.",
+      bioText1: "I am Mohamed Taha Al-Qashar, a Computer Engineer who graduated from Bartın University in Turkey. I believe coding is not just writing lines of syntax, but a problem-solving catalyst for shaping the future.",
       bioText2: "Throughout my academic and professional journey, I built numerous projects with modern tech stacks, participated in international youth exchanges, volunteer initiatives, and tech programs.",
       bioText3: "I constantly aim to expand my knowledge, learn cutting-edge Web & AI tech, and contribute to impactful software solutions.",
       timelineTitle: "Academic & Career Journey",
       timeline: [
         {
           year: "2026",
-          title: "Graduation in Software Engineering",
+          title: "Graduation in Computer Engineering",
           institution: "Bartın University - Turkey",
           desc: "Completed B.Sc. with distinguished capstone projects in AI computer vision and web platforms."
         },
@@ -477,7 +477,7 @@ export const translations = {
       btnCv: "Özgeçmiş İndir",
       btnContact: "İletişime Geç",
       stats: {
-        degree: "Yazılım Mühendisliği Mezunu",
+        degree: "Bilgisayar Mühendisliği Mezunu",
         university: "Bartın Üniversitesi - Türkiye",
         projects: "+40 Yazılım Projesi",
         certificates: "+30 Sertifika",
@@ -489,14 +489,14 @@ export const translations = {
     about: {
       title: "Hakkımda",
       subtitle: "Yenilikçilik ve Teknik Mükemmellik Tutkusu",
-      bioText1: "Ben Mohamed Taha Al-Qashar, Bilgisayar Mühendisi ve Türkiye'deki Bartın Üniversitesi Yazılım Mühendisliği mezunuyum.",
+      bioText1: "Ben Mohamed Taha Al-Qashar, Bilgisayar Mühendisi ve Türkiye'deki Bartın Üniversitesi Bilgisayar Mühendisliği mezunuyum.",
       bioText2: "Akademik ve pratik süreçlerimde web, yapay zeka ve veritabanı projeleri geliştirdim; uluslararası programlarda yer aldım.",
       bioText3: "Her zaman kendimi geliştirmeyi ve topluma yararlı yazılımlar üretmeyi amaçlıyorum.",
       timelineTitle: "Akademik ve Kariyer Yolculuğu",
       timeline: [
         {
           year: "2026",
-          title: "Yazılım Mühendisliği Mezuniyeti",
+          title: "Bilgisayar Mühendisliği Mezuniyeti",
           institution: "Bartın Üniversitesi - Türkiye",
           desc: "Yapay zeka ve web sistemleri üzerine başarılı projelerle mezuniyet."
         },

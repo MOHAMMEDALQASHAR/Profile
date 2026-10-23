@@ -40,11 +40,11 @@ export default function AiChatbot({ isOpen, onClose, t, lang }) {
     // Education & Certificates inquiry
     if (q.includes('دراسة') || q.includes('جامعة') || q.includes('شهادة') || q.includes('تخرج') || q.includes('education') || q.includes('university') || q.includes('degree') || q.includes('mezun') || q.includes('bartın')) {
       if (lang === 'en') {
-        return "Mohamed is a **Computer Engineer** and graduated with a B.Sc. in **Software Engineering** from **Bartın University** in Turkey. He specializes in Web Development, AI, and Databases.";
+        return "Mohamed is a **Computer Engineer** and graduated with a B.Sc. in **Computer Engineering** from **Bartın University** in Turkey. He specializes in Web Development, AI, and Databases.";
       } else if (lang === 'tr') {
-        return "Mohamed, **Bilgisayar Mühendisi** olup Türkiye'deki **Bartın Üniversitesi Yazılım Mühendisliği** bölümünden başarıyla mezun olmuştur. Web geliştirme, yapay zeka ve veritabanı alanlarında uzmanlaşmıştır.";
+        return "Mohamed, **Bilgisayar Mühendisi** olup Türkiye'deki **Bartın Üniversitesi Bilgisayar Mühendisliği** bölümünden başarıyla mezun olmuştur. Web geliştirme, yapay zeka ve veritabanı alanlarında uzmanlaşmıştır.";
       } else {
-        return "محمد طه القشار **مهندس حاسوب** وخريج **هندسة البرمجيات من جامعة بارتن في تركيا (Bartın Üniversitesi)** ومطور برمجيات وحلول رقمية، متخصص في تطوير تطبيقات الويب، أنظمة الذكاء الاصطناعي، وقواعد البيانات.";
+        return "محمد طه القشار **مهندس حاسوب** وخريج **هندسة الحاسوب من جامعة بارتن في تركيا (Bartın Üniversitesi)** ومطور برمجيات وحلول رقمية، متخصص في تطوير تطبيقات الويب، أنظمة الذكاء الاصطناعي، وقواعد البيانات.";
       }
     }
 
