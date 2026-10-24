@@ -60,11 +60,10 @@ export const projectsData = [
     ],
     demoUrl: "https://github.com/mohamed-taha-alqashar/smart-ai-attendance",
     githubUrl: "https://github.com/mohamed-taha-alqashar/smart-ai-attendance",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
+    image: "/projects/smart-ai-attendance.png",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     gallery: [
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1000&q=80"
+      "/projects/smart-ai-attendance.png"
     ]
   },
   {
