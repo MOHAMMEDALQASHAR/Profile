@@ -28,11 +28,9 @@ export const projectsData = [
     demoUrl: "https://salah-ahla-alayam-s4mi.vercel.app/",
     githubUrl: "https://github.com/MOHAMMEDALQASHAR/ahla-al-ayyam-system",
     image: "/projects/ahla-al-ayam.png",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    videoUrl: "",
     gallery: [
-      "/projects/ahla-al-ayam.png",
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1000&q=80"
+      "/projects/ahla-al-ayam.png"
     ]
   },
   {

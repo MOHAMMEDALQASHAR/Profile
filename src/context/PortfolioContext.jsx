@@ -26,12 +26,24 @@ export function PortfolioProvider({ children }) {
     if (!Array.isArray(projList)) return initialProjects;
     return projList.map(p => {
       const matchInit = initialProjects.find(init => init.id === (p.customId || p.id));
+      if (!matchInit) return p;
+      if (matchInit.id === 'ahla-al-ayyam') {
+        return {
+          ...p,
+          image: matchInit.image,
+          demoUrl: matchInit.demoUrl,
+          gallery: matchInit.gallery,
+          videoUrl: matchInit.videoUrl
+        };
+      }
       const gallery = p.gallery !== undefined
         ? p.gallery
         : (matchInit?.gallery || []);
       const videoUrl = p.videoUrl !== undefined ? p.videoUrl : (matchInit?.videoUrl || '');
       return {
         ...p,
+        image: matchInit.image || p.image,
+        demoUrl: matchInit.demoUrl || p.demoUrl,
         gallery,
         videoUrl
       };
