@@ -101,37 +101,36 @@ export const projectsData = [
     ]
   },
   {
-    id: "data-analytics-dashboard",
-    category: "database",
+    id: "cv-email-sender",
+    category: "web",
     title: {
-      ar: "لوحة تحليل بيانات تفاعلية",
-      en: "Interactive Data Analytics Dashboard",
-      tr: "İnteraktif Veri Analiz Paneli"
+      ar: "مرسل السيرة الذاتية عبر البريد الإلكتروني",
+      en: "CV Email Sender",
+      tr: "CV E-posta Gönderici"
     },
     shortDesc: {
-      ar: "Dashboard احترافية لعرض وتحليل البيانات باستخدام الرسوم البيانية والتقارير.",
-      en: "Professional analytical dashboard for visualization, KPI tracking, dynamic charts, and automated data exports.",
-      tr: "Dinamik grafikler, KPI takibi ve veri dışa aktarma özelliklerine sahip profesyonel analiz paneli."
+      ar: "أرسل سيرتك الذاتية بسهولة عبر البريد الإلكتروني بضغطة زر، طريقة بسيطة وسريعة للتقديم على وظيفة أحلامك.",
+      en: "Send your CV easily via email. A simple, fast, and secure way to send your resume to your dream job in just a few clicks.",
+      tr: "Özgeçmişinizi e-posta ile tek tıkla kolayca gönderin. Hayalinizdeki işe başvurmanın hızlı, güvenli ve pratik yolu."
     },
     longDesc: {
-      ar: "لوحة بيانات ذكية تدعم الاتصال بعدة قواعد بيانات (PostgreSQL, SQL Server, MySQL)، وتقوم بتصفية وتجميع البيانات الضخمة وعرضها في مخططات بيانية تفاعلية (Bar, Line, Pie, Radar Charts) لمساعدة صناع القرار على اتخاذ القرارات المبنية على البيانات.",
-      en: "High-performance Business Intelligence dashboard connecting seamlessly with PostgreSQL & SQL Server data warehouses. Generates real-time charts, visual trends, aggregated financial metrics, and customizable PDF/Excel reports.",
-      tr: "PostgreSQL ve SQL Server veritabanlarına bağlanan iş zekası paneli. Gerçek zamanlı grafikler, trend analizleri ve özelleştirilebilir raporlar oluşturur."
+      ar: "منصة ويب احترافية وسريعة وآمنة تتيح للمستخدمين إرسال سيرهم الذاتية وخطابات التقديم مباشرة إلى مسؤولي التوظيف والشركات بضغطة زر واحدة، مع دعم إرفاق ملفات السيرة الذاتية (PDF, DOC)، وضمان سرية البيانات وتقديم واجهة عصرية وسهلة الاستخدام.",
+      en: "A professional, fast, and secure web platform allowing job seekers to dispatch their resumes and cover letters directly to recruiters and companies in just a few clicks. Features multi-format CV attachments (PDF, DOC), data privacy protection, and a modern user-friendly experience.",
+      tr: "İş arayanların özgeçmiş ve başvuru mektuplarını İK yetkililerine tek tıkla kolayca iletmesini sağlayan hızlı, güvenli ve profesyonel web platformu. PDF ve DOC ek desteği, tam veri güvenliği ve modern bir kullanıcı deneyimi sunar."
     },
-    tech: ["React", "Chart.js / Recharts", "ASP.NET Core", "SQL Server", "PostgreSQL", "Tailwind CSS"],
+    tech: ["React", "Node.js", "Nodemailer", "Tailwind CSS", "REST API", "Vercel"],
     highlights: [
-      "رسوم بيانية تفاعلية ومؤشرات أداء مباشرة (Real-Time Interactive KPI Charts)",
-      "تصفية متقدمة وتجميع البيانات (Advanced Multi-Filter Data Aggregation)",
-      "تصدير التقارير بصيغة PDF وExcel (PDF & Excel Data Export Engine)",
-      "دعم وضع الرؤية الداكنة والفاتحة (Dark / Light Theme Visualizer)"
+      "سريع وسهل: أرسل سيرتك الذاتية بضغطة زر فقط (Fast & Easy One-Click Dispatch)",
+      "آمن ومحمي: بياناتك دائماً محمية ومشفرة (Secure & Protected User Data)",
+      "أرفق سيرتك الذاتية بصيغ متعددة (Attach CV in PDF, DOC, etc.)",
+      "تصميم احترافي يعطي انطباعاً أولياً مميزاً (Professional Modern Experience)"
     ],
-    demoUrl: "https://analytics-dashboard-demo.vercel.app",
-    githubUrl: "https://github.com/mohamed-taha-alqashar/data-analytics-dashboard",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    demoUrl: "https://email-sender-bice-one.vercel.app/",
+    githubUrl: "https://github.com/MOHAMMEDALQASHAR/email-sender",
+    image: "/projects/cv-email-sender.png",
+    videoUrl: "",
     gallery: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80"
+      "/projects/cv-email-sender.png"
     ]
   }
 ];

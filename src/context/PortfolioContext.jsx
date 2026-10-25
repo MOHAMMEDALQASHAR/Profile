@@ -25,13 +25,23 @@ export function PortfolioProvider({ children }) {
   const enrichProjects = (projList) => {
     if (!Array.isArray(projList)) return initialProjects;
     return projList.map(p => {
+      if (p.id === 'data-analytics-dashboard') {
+        const cvProj = initialProjects.find(init => init.id === 'cv-email-sender');
+        if (cvProj) return cvProj;
+      }
       const matchInit = initialProjects.find(init => init.id === (p.customId || p.id));
       if (!matchInit) return p;
-      if (matchInit.id === 'ahla-al-ayyam') {
+      if (matchInit.id === 'ahla-al-ayyam' || matchInit.id === 'smart-ai-attendance' || matchInit.id === 'cv-email-sender') {
         return {
           ...p,
+          title: matchInit.title,
+          shortDesc: matchInit.shortDesc,
+          longDesc: matchInit.longDesc,
+          tech: matchInit.tech,
+          highlights: matchInit.highlights,
           image: matchInit.image,
           demoUrl: matchInit.demoUrl,
+          githubUrl: matchInit.githubUrl,
           gallery: matchInit.gallery,
           videoUrl: matchInit.videoUrl
         };
