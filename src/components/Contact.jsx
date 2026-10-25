@@ -67,8 +67,8 @@ export default function Contact({ t }) {
     },
     {
       title: "واتساب (WhatsApp)",
-      action: "بدء محادثة فورية",
-      link: `https://wa.me/${contactInfo.whatsapp}`,
+      action: "+90 535 742 21 37",
+      link: `https://wa.me/${(contactInfo.whatsapp || '905357422137').replace(/[^0-9]/g, '')}`,
       icon: Phone,
       color: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10",
       hoverBorder: "hover:border-emerald-500/50"

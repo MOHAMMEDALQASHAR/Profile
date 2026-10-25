@@ -124,6 +124,12 @@ export function PortfolioProvider({ children }) {
         if (!parsed.youtube) {
           parsed.youtube = 'https://youtube.com/@alqashar?si=BLeQdUXFnnm4Qy0c';
         }
+        if (!parsed.whatsapp || parsed.whatsapp === '905526909944' || parsed.whatsapp.includes('552')) {
+          parsed.whatsapp = '905357422137';
+        }
+        if (!parsed.phone || parsed.phone.includes('552')) {
+          parsed.phone = '+905357422137';
+        }
         delete parsed.telegram;
         return parsed;
       } catch {
@@ -133,7 +139,7 @@ export function PortfolioProvider({ children }) {
     return {
       email: 'alqashar2002@gmail.com',
       phone: '+905357422137',
-      whatsapp: '905526909944',
+      whatsapp: '905357422137',
       linkedin: 'mohammed-taha-alqashar-9579422b6',
       github: 'MOHAMMEDALQASHAR',
       instagram: 'alqashar123',

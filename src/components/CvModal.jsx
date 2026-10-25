@@ -3,7 +3,7 @@ import { X, Printer, Download, Mail, Phone, MapPin, GraduationCap, Briefcase, Aw
 import { usePortfolio } from '../context/PortfolioContext';
 
 export default function CvModal({ isOpen, onClose, t, lang }) {
-  const { bioInfo } = usePortfolio();
+  const { bioInfo, contactInfo } = usePortfolio();
 
   if (!isOpen) return null;
 
@@ -84,7 +84,7 @@ export default function CvModal({ isOpen, onClose, t, lang }) {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-sky-600" />
-                <span>+90 552 690 99 44</span>
+                <span>{contactInfo?.phone || '+90 535 742 21 37'}</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-sky-600" />
