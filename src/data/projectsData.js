@@ -67,37 +67,36 @@ export const projectsData = [
     ]
   },
   {
-    id: "lms-learning-platform",
-    category: "web",
+    id: "smart-eyes",
+    category: "ai",
     title: {
-      ar: "منصة تعليمية متكاملة",
-      en: "Comprehensive Educational Platform",
-      tr: "Kapsamlı Eğitim ve Kurs Platformu"
+      ar: "العين الذكية (Smart Eyes) - مساعد ذكي للمكفوفين",
+      en: "Smart Eyes - AI Assistant for the Visually Impaired",
+      tr: "Smart Eyes - Görme Engelliler İçin Yapay Zeka Asistanı"
     },
     shortDesc: {
-      ar: "منصة لإدارة الدورات والطلاب والمدربين مع نظام صلاحيات متكامل (RBAC).",
-      en: "Full-featured LMS platform for managing online courses, students, instructors, and role-based permissions.",
-      tr: "Kurslar, öğrenciler, eğitmenler ve yetkilendirme sistemi (RBAC) içeren kapsamlı LMS platformu."
+      ar: "مساعد ذكي يعتمد على الرؤية الحاسوبية ونماذج YOLO لتوجيه المكفوفين وتنبيههم بالعوائق صوتياً نحو حياة أكثر أماناً واستقلالية.",
+      en: "Edge AI computer vision assistant using YOLO and Raspberry Pi to provide real-time voice guidance and obstacle alerts for the visually impaired.",
+      tr: "Görme engelliler için YOLO ve Raspberry Pi tabanlı gerçek zamanlı nesne tanıma, sesli yönlendirme ve engel uyarı asistanı."
     },
     longDesc: {
-      ar: "منصة تعليمية شاملة توفر بيئة تفاعلية للمدربين والطلاب، تشمل إدارة الدورات التدريبية، تحميل ملفات المحاضرات، حل الواجبات، الاختبارات الإلكترونية، إصدار الشهادات الأوتوماتيكية، ونظام صلاحيات متقدم (Admin, Instructor, Student).",
-      en: "A robust Learning Management System built with React, Node.js/Express, and MongoDB. Features course enrollment, video streaming, interactive quizzes, automated certificate generation upon course completion, and multi-tier RBAC access control.",
-      tr: "React, Node.js ve MongoDB ile geliştirilmiş eğitim yönetim sistemi. Kurs kaydı, ödev teslimi, online sınavlar ve otomatik sertifika oluşturma modüllerine sahiptir."
+      ar: "مشروع متكامل ومبتكر للرؤية الحاسوبية (Computer Vision) على الحافة (Edge AI) موجه لخدمة المكفوفين وضعاف البصر. يلتقط النظام البيئة المحيطة عبر كاميرا مدمجة مع معالج Raspberry Pi، ويقوم بتحليل المشهد آنياً باستخدام خوارزميات YOLOv8 وTensorFlow للتعرف على الأشخاص، المركبات، والعوائق، ومن ثم تحويل النتائج إلى إرشادات وتنبيهات صوتية فورية عبر تقنية (Text-to-Speech) لمساعدتهم على التنقل والوصول إلى وجهاتهم بأمان واستقلالية تامة.",
+      en: "An advanced Edge AI computer vision wearable assistant engineered to empower the visually impaired. Utilizing a high-resolution camera integrated with Raspberry Pi, the system captures surroundings and performs real-time scene analysis using YOLOv8 and TensorFlow models to recognize pedestrians, vehicles, and hazards. It translates detections into instantaneous audio feedback and navigation prompts via Text-to-Speech (TTS), enabling autonomous and confident mobility.",
+      tr: "Görme engellilere yönelik Raspberry Pi ve kamera entegrasyonlu giyilebilir yapay zeka asistanı. YOLOv8 ve TensorFlow modelleri ile çevredeki yayaları, araçları ve engelleri gerçek zamanlı algılayarak Metinden Sese (TTS) teknolojisiyle sesli yönlendirme ve anlık güvenlik uyarıları sağlar."
     },
-    tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT Auth"],
+    tech: ["Raspberry Pi", "OpenCV", "TensorFlow", "YOLOv8", "TTS (Text to Speech)", "Python"],
     highlights: [
-      "إدارة الدورات والطلاب والمدربين (Courses, Student & Instructor Portals)",
-      "نظام صلاحيات وأمان محكم (Role-Based Access Control - RBAC)",
-      "اختبارات إلكترونية وتقييمات تلقائية (Online Quizzes & Instant Grading)",
-      "توليد شهادات إتمام الدورة تلقائياً (Automated Course Completion Certificates)"
+      "التعرف الآني على الأشياء والمركبات والأشخاص (Real-Time Object & Obstacle Recognition)",
+      "توجيه صوتي فوري وتنبيه استباقي من العوائق (Instant Audio Guidance & Hazard Alerts)",
+      "التنقل الذكي والإرشاد إلى الوجهات (Smart Navigation to Destinations)",
+      "معالجة حاسوبية مدمجة على شريحة Raspberry Pi (Edge Computing Hardware Integration)"
     ],
-    demoUrl: "https://lms-platform-demo.vercel.app",
-    githubUrl: "https://github.com/mohamed-taha-alqashar/lms-educational-platform",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1000&q=80",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    demoUrl: "https://github.com/MOHAMMEDALQASHAR/smart-eyes",
+    githubUrl: "https://github.com/MOHAMMEDALQASHAR/smart-eyes",
+    image: "/projects/smart-eyes.jpg",
+    videoUrl: "",
     gallery: [
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80"
+      "/projects/smart-eyes.jpg"
     ]
   },
   {

@@ -29,9 +29,13 @@ export function PortfolioProvider({ children }) {
         const cvProj = initialProjects.find(init => init.id === 'cv-email-sender');
         if (cvProj) return cvProj;
       }
+      if (p.id === 'lms-learning-platform') {
+        const smartEyesProj = initialProjects.find(init => init.id === 'smart-eyes');
+        if (smartEyesProj) return smartEyesProj;
+      }
       const matchInit = initialProjects.find(init => init.id === (p.customId || p.id));
       if (!matchInit) return p;
-      if (matchInit.id === 'ahla-al-ayyam' || matchInit.id === 'smart-ai-attendance' || matchInit.id === 'cv-email-sender') {
+      if (matchInit.id === 'ahla-al-ayyam' || matchInit.id === 'smart-ai-attendance' || matchInit.id === 'cv-email-sender' || matchInit.id === 'smart-eyes') {
         return {
           ...p,
           title: matchInit.title,
