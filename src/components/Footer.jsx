@@ -20,7 +20,7 @@ export default function Footer({ t }) {
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-bold text-white">
-                محمد طه القشار
+                {t.footer?.name || t.navbar?.name || t.hero?.name || "Mohamed Taha Al-Qashar"}
               </span>
               <span className="text-xs text-slate-400">
                 {t.footer.rights}

@@ -72,7 +72,7 @@ export default function App() {
 
       {/* Main Page Content */}
       <main className="relative z-10">
-        <Hero t={t} openCvModal={() => setIsCvModalOpen(true)} />
+        <Hero t={t} lang={lang} openCvModal={() => setIsCvModalOpen(true)} />
         <Experience t={t} />
         <Projects t={t} lang={lang} />
         <Participations t={t} />

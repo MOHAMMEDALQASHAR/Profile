@@ -48,7 +48,7 @@ export default function Experience({ t }) {
                       </h3>
                       <span className="text-[9px] sm:text-xs font-semibold text-emerald-400 flex items-center gap-1 mt-0.5">
                         <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-                        <span>مجال رئيسي</span>
+                        <span>{t.experience.mainField}</span>
                       </span>
                     </div>
                   </div>
@@ -59,8 +59,8 @@ export default function Experience({ t }) {
                 </div>
 
                 <div className="hidden sm:flex mt-8 pt-4 border-t border-slate-700/30 items-center justify-between text-xs text-slate-400 font-semibold">
-                  <span>هندسة برمجيات وحلول رقمية</span>
-                  <span className="text-sky-400">خبرة عملية وتطبيقية</span>
+                  <span>{t.experience.domain}</span>
+                  <span className="text-sky-400">{t.experience.practicalExp}</span>
                 </div>
               </div>
             );

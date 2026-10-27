@@ -28,10 +28,10 @@ export default function Participations({ t }) {
               <Globe className="w-4 h-4 sm:w-6 sm:h-6" />
             </div>
             <h3 className="text-xs sm:text-lg font-bold text-white mb-1 sm:mb-2">
-              مشاريع Erasmus+ الأوروبية
+              {t.participations.card1Title}
             </h3>
             <p className="text-[10px] sm:text-sm text-slate-300 leading-snug sm:leading-relaxed">
-              المشاركة في برامج التبادل الشبابي والثقافي وتنمية المهارات القيادية والتواصل الدولي في أوروبا.
+              {t.participations.card1Desc}
             </p>
           </div>
 
@@ -40,10 +40,10 @@ export default function Participations({ t }) {
               <Heart className="w-4 h-4 sm:w-6 sm:h-6" />
             </div>
             <h3 className="text-xs sm:text-lg font-bold text-white mb-1 sm:mb-2">
-              العمل التطوعي والمبادرات
+              {t.participations.card2Title}
             </h3>
             <p className="text-[10px] sm:text-sm text-slate-300 leading-snug sm:leading-relaxed">
-              التطوع في تنظيم المؤتمرات والفعاليات الشبابية وإدارة الفرق الإعلامية والتقنية بكفاءة.
+              {t.participations.card2Desc}
             </p>
           </div>
 
@@ -52,10 +52,10 @@ export default function Participations({ t }) {
               <Award className="w-4 h-4 sm:w-6 sm:h-6" />
             </div>
             <h3 className="text-xs sm:text-lg font-bold text-white mb-1 sm:mb-2">
-              التبادل الثقافي والتطوير
+              {t.participations.card3Title}
             </h3>
             <p className="text-[10px] sm:text-sm text-slate-300 leading-snug sm:leading-relaxed">
-              بناء جسور التواصل بين الشباب العربي والدولي لتبادل الخبرات وتطوير المهارات التقنية الحياتية.
+              {t.participations.card3Desc}
             </p>
           </div>
 

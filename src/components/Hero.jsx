@@ -13,8 +13,12 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
-export default function Hero({ t, openCvModal }) {
+export default function Hero({ t, lang, openCvModal }) {
   const { bioInfo, projects, certificates } = usePortfolio();
+
+  const displayName = lang === 'ar' ? (bioInfo.name || t.hero.name) : t.hero.name;
+  const displayRole = lang === 'ar' ? (bioInfo.role || t.hero.role) : t.hero.role;
+  const displayUniversity = lang === 'ar' ? (bioInfo.university || t.hero.stats.university) : t.hero.stats.university;
 
   return (
     <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
@@ -36,13 +40,13 @@ export default function Hero({ t, openCvModal }) {
 
             {/* Name */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 text-white">
-              <span className="gradient-text">{bioInfo.name || t.hero.name}</span>
+              <span className="gradient-text">{displayName}</span>
             </h1>
 
             {/* Subtitle / Role */}
             <div className="mb-6 text-xl sm:text-2xl font-bold text-slate-200">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400">
-                {bioInfo.role || t.hero.role}
+                {displayRole}
               </span>
             </div>
 
@@ -112,7 +116,7 @@ export default function Hero({ t, openCvModal }) {
                 {/* Profile Image */}
                 <img
                   src="/mohamed-profile.jpg"
-                  alt="م. محمد طه القشار"
+                  alt={displayName}
                   onError={(e) => {
                     e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80";
                   }}
@@ -122,14 +126,14 @@ export default function Hero({ t, openCvModal }) {
                 {/* Online badge */}
                 <div className="absolute bottom-4 right-4 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/90 border border-emerald-500/40 backdrop-blur-sm shadow-lg">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                  <span className="text-[10px] font-bold text-emerald-400">متاح للعمل</span>
+                  <span className="text-[10px] font-bold text-emerald-400">{t.hero.available}</span>
                 </div>
               </div>
 
               {/* Name card below */}
               <div className="mt-6 px-6 py-3 rounded-2xl bg-slate-900/80 border border-slate-700/50 backdrop-blur-md shadow-xl text-center">
-                <h4 className="font-extrabold text-white text-base">محمد طه القشار</h4>
-                <span className="text-xs text-sky-400 font-semibold">مهندس حاسوب • جامعة بارتن 🎓</span>
+                <h4 className="font-extrabold text-white text-base">{t.hero.nameCard || displayName}</h4>
+                <span className="text-xs text-sky-400 font-semibold">{t.hero.roleCard}</span>
               </div>
 
             </div>
@@ -144,7 +148,7 @@ export default function Hero({ t, openCvModal }) {
           <div className="glass-card p-4 rounded-2xl flex flex-col items-center text-center">
             <GraduationCap className="w-7 h-7 text-sky-400 mb-2" />
             <span className="text-xs font-bold text-slate-300 dark:text-slate-300 text-slate-700">{t.hero.stats.degree}</span>
-            <span className="text-[10px] text-sky-400 mt-1">{bioInfo.university || t.hero.stats.university}</span>
+            <span className="text-[10px] text-sky-400 mt-1">{displayUniversity}</span>
           </div>
 
           <div className="glass-card p-4 rounded-2xl flex flex-col items-center text-center">
@@ -156,19 +160,19 @@ export default function Hero({ t, openCvModal }) {
           <div className="glass-card p-4 rounded-2xl flex flex-col items-center text-center">
             <Globe2 className="w-7 h-7 text-emerald-400 mb-2" />
             <span className="text-xs font-bold text-slate-300 dark:text-slate-300 text-slate-700">{t.hero.stats.international}</span>
-            <span className="text-[10px] text-emerald-400 mt-1">International Programs</span>
+            <span className="text-[10px] text-emerald-400 mt-1">{t.hero.internationalPrograms}</span>
           </div>
 
           <div className="glass-card p-4 rounded-2xl flex flex-col items-center text-center">
             <Sparkles className="w-7 h-7 text-indigo-400 mb-2" />
             <span className="text-xs font-bold text-slate-300 dark:text-slate-300 text-slate-700">{t.hero.stats.erasmus}</span>
-            <span className="text-[10px] text-indigo-400 mt-1">Youth Exchange</span>
+            <span className="text-[10px] text-indigo-400 mt-1">{t.hero.youthExchange}</span>
           </div>
 
           <div className="glass-card p-4 rounded-2xl flex flex-col items-center text-center">
             <Heart className="w-7 h-7 text-rose-400 mb-2" />
             <span className="text-xs font-bold text-slate-300 dark:text-slate-300 text-slate-700">{t.hero.stats.volunteer}</span>
-            <span className="text-[10px] text-rose-400 mt-1">Community Leader</span>
+            <span className="text-[10px] text-rose-400 mt-1">{t.hero.communityLeader}</span>
           </div>
 
         </div>

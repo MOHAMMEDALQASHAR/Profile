@@ -33,7 +33,7 @@ export default function Contact({ t }) {
           access_key: '523562cb-5473-4b85-86f0-0f14da8ce572',
           name: formData.name,
           email: formData.email,
-          subject: formData.subject || 'رسالة جديدة من زائر موقعك الشخصي',
+          subject: formData.subject || t.contact.form.defaultSubject || 'New message from portfolio visitor',
           message: formData.message,
           from_name: formData.name
         })
@@ -47,10 +47,10 @@ export default function Contact({ t }) {
           setSubmitted(false);
         }, 5000);
       } else {
-        setErrorMessage(data.message || 'حدث خطأ أثناء إرسال الرسالة، يرجى المحاولة لاحقاً');
+        setErrorMessage(data.message || t.contact.form.errorMessage || 'حدث خطأ أثناء إرسال الرسالة، يرجى المحاولة لاحقاً');
       }
     } catch {
-      setErrorMessage('تعذر الاتصال بالخادم، يرجى التحقق من اتصال الإنترنت');
+      setErrorMessage(t.contact.form.networkError || 'تعذر الاتصال بالخادم، يرجى التحقق من اتصال الإنترنت');
     } finally {
       setIsSubmitting(false);
     }
@@ -58,15 +58,15 @@ export default function Contact({ t }) {
 
   const contactChannels = [
     {
-      title: "البريد الإلكتروني",
-      action: "إرسال رسالة مباشرة",
+      title: t.contact.email,
+      action: t.contact.emailAction,
       link: `mailto:${contactInfo.email}`,
       icon: Mail,
       color: "text-sky-400 border-sky-500/30 bg-sky-500/10",
       hoverBorder: "hover:border-sky-500/50"
     },
     {
-      title: "واتساب (WhatsApp)",
+      title: t.contact.whatsappTitle || "WhatsApp",
       action: "+90 535 742 21 37",
       link: `https://wa.me/${(contactInfo.whatsapp || '905357422137').replace(/[^0-9]/g, '')}`,
       icon: Phone,
@@ -75,7 +75,7 @@ export default function Contact({ t }) {
     },
     {
       title: "LinkedIn",
-      action: "زيارة الحساب المهني",
+      action: t.contact.linkedinAction,
       link: contactInfo.linkedin && contactInfo.linkedin.startsWith('http') ? contactInfo.linkedin : `https://www.linkedin.com/in/${contactInfo.linkedin || 'mohammed-taha-alqashar-9579422b6'}`,
       icon: LinkedinIcon,
       color: "text-blue-400 border-blue-500/30 bg-blue-500/10",
@@ -83,7 +83,7 @@ export default function Contact({ t }) {
     },
     {
       title: "GitHub",
-      action: "تصفح الأكواد والمشاريع",
+      action: t.contact.githubAction,
       link: contactInfo.github && contactInfo.github.startsWith('http') ? contactInfo.github : `https://github.com/${contactInfo.github || 'MOHAMMEDALQASHAR'}`,
       icon: GithubIcon,
       color: "text-purple-400 border-purple-500/30 bg-purple-500/10",
@@ -91,7 +91,7 @@ export default function Contact({ t }) {
     },
     {
       title: "Instagram",
-      action: "زيارة الصفحة الرسمية",
+      action: t.contact.instagramAction,
       link: contactInfo.instagram && contactInfo.instagram.startsWith('http')
         ? contactInfo.instagram
         : `https://www.instagram.com/${contactInfo.instagram ? contactInfo.instagram.replace('@', '') : 'alqashar123'}`,
@@ -101,7 +101,7 @@ export default function Contact({ t }) {
     },
     {
       title: "YouTube",
-      action: "مشاهدة القناة والفيديوهات",
+      action: t.contact.youtubeAction,
       link: contactInfo.youtube && contactInfo.youtube.startsWith('http')
         ? contactInfo.youtube
         : `https://youtube.com/@${contactInfo.youtube ? contactInfo.youtube.replace('@', '') : 'alqashar'}?si=BLeQdUXFnnm4Qy0c`,
@@ -169,7 +169,7 @@ export default function Contact({ t }) {
               <div className="py-12 flex flex-col items-center justify-center text-center animate-fadeIn">
                 <CheckCircle2 className="w-16 h-16 text-emerald-400 mb-4 animate-bounce" />
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  شكراً لتواصلك!
+                  {t.contact.form.thankYou || 'شكراً لتواصلك!'}
                 </h3>
                 <p className="text-slate-300 text-sm max-w-md">
                   {t.contact.form.success}
@@ -246,7 +246,7 @@ export default function Contact({ t }) {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-4 h-4 animate-spin" />
-                      <span>جاري الإرسال...</span>
+                      <span>{t.contact.form.sending || 'جاري الإرسال...'}</span>
                     </>
                   ) : (
                     <>

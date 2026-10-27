@@ -74,10 +74,10 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-lg tracking-tight gradient-text leading-tight">
-                محمد طه القشار
+                {t.navbar?.name || t.hero?.name || "Mohamed Taha Al-Qashar"}
               </span>
               <span className="text-[10px] text-slate-400 dark:text-slate-400 font-medium">
-                Software Engineer
+                {t.navbar?.role || "Software Engineer"}
               </span>
             </div>
           </a>
@@ -106,10 +106,10 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
                   ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300 hover:bg-emerald-500/30'
                   : 'bg-slate-800/40 border-slate-700/40 text-slate-300 hover:border-sky-500/40 hover:text-sky-400'
               }`}
-              title="لوحة تحكم الأدمن"
+              title={isAdminLoggedIn ? (t.nav.adminDashboard || 'لوحة التحكم') : (t.nav.adminLogin || 'دخول الأدمن')}
             >
               <Lock className="w-3.5 h-3.5 text-amber-400" />
-              <span>{isAdminLoggedIn ? 'لوحة التحكم' : 'دخول الأدمن'}</span>
+              <span>{isAdminLoggedIn ? (t.nav.adminDashboard || 'لوحة التحكم') : (t.nav.adminLogin || 'دخول الأدمن')}</span>
             </button>
 
             {/* Language Switcher Dropdown */}
@@ -206,7 +206,7 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
                 className="w-full py-2.5 rounded-xl bg-slate-800 text-amber-400 font-bold text-xs flex items-center justify-center gap-2 border border-slate-700"
               >
                 <Lock className="w-4 h-4" />
-                <span>لوحة تحكم الأدمن</span>
+                <span>{isAdminLoggedIn ? (t.nav.adminDashboard || 'لوحة التحكم') : (t.nav.adminLogin || 'دخول الأدمن')}</span>
               </button>
 
               <div className="flex items-center justify-between">

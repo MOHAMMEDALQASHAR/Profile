@@ -148,13 +148,13 @@ export default function Projects({ t, lang }) {
                     {hasGallery && (
                       <span className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-amber-600/90 backdrop-blur-md border border-amber-400/40 text-white text-[8px] sm:text-[10px] font-extrabold flex items-center gap-0.5 sm:gap-1">
                         <Images className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-                        <span>{project.gallery.length} صور</span>
+                        <span>{project.gallery.length} {t.projects.photosCount || 'صور'}</span>
                       </span>
                     )}
                     {hasVideo && (
                       <span className="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-purple-600/90 backdrop-blur-md border border-purple-400/40 text-white text-[8px] sm:text-[10px] font-extrabold flex items-center gap-0.5 sm:gap-1">
                         <Video className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-                        <span className="hidden sm:inline">فيديو</span>
+                        <span className="hidden sm:inline">{t.projects.videoBadge || 'فيديو'}</span>
                       </span>
                     )}
                   </div>
@@ -297,7 +297,7 @@ export default function Projects({ t, lang }) {
                 <button
                   onClick={() => setSelectedProject(null)}
                   className="p-1 rounded-full bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-all shrink-0"
-                  title="إغلاق النافذة"
+                  title={t.certificates?.modalClose || 'Close'}
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>
@@ -342,7 +342,7 @@ export default function Projects({ t, lang }) {
                                 }`}
                               >
                                 <Video className="w-3 h-3" />
-                                <span>فيديو</span>
+                                <span>{t.projects.tabVideo || 'فيديو'}</span>
                                 <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
                               </button>
                             )}
@@ -358,7 +358,7 @@ export default function Projects({ t, lang }) {
                                 }`}
                               >
                                 <Images className="w-3 h-3" />
-                                <span>الصور ({selectedProject.gallery?.length || 0})</span>
+                                <span>{t.projects.tabGallery || 'الصور'} ({selectedProject.gallery?.length || 0})</span>
                               </button>
                             )}
                           </div>
@@ -378,7 +378,7 @@ export default function Projects({ t, lang }) {
                               <button
                                 onClick={() => setLightboxImage(selectedProject.image)}
                                 className="absolute bottom-1.5 right-1.5 p-1 rounded-md bg-slate-900/80 backdrop-blur-md text-white border border-slate-700 hover:bg-sky-500 transition-all shadow-sm"
-                                title="تكبير الصورة"
+                                title={lang === 'ar' ? 'تكبير الصورة' : lang === 'tr' ? 'Büyüt' : 'Zoom In'}
                               >
                                 <Maximize2 className="w-3 h-3" />
                               </button>

@@ -13,7 +13,13 @@ export const translations = {
       gallery: "المعرض",
       contact: "التواصل",
       downloadCv: "تحميل السيرة الذاتية",
-      aiAssistant: "المساعد الذكي"
+      aiAssistant: "المساعد الذكي",
+      adminLogin: "دخول الأدمن",
+      adminDashboard: "لوحة التحكم"
+    },
+    navbar: {
+      name: "محمد طه القشار",
+      role: "مهندس برمجيات"
     },
     hero: {
       badge: "متاح للفرص والمشاريع الاحترافية 🚀",
@@ -24,6 +30,12 @@ export const translations = {
       btnProjects: "استعرض أعمالي",
       btnCv: "تحميل السيرة الذاتية",
       btnContact: "تواصل معي",
+      available: "متاح للعمل",
+      nameCard: "محمد طه القشار",
+      roleCard: "مهندس حاسوب • جامعة بارتن 🎓",
+      internationalPrograms: "برامج دولية",
+      youthExchange: "تبادل شبابي",
+      communityLeader: "قيادة مجتمعية",
       stats: {
         degree: "خريج هندسة حاسوب",
         university: "جامعة بارتن - تركيا",
@@ -84,6 +96,9 @@ export const translations = {
     experience: {
       title: "الخبرات",
       subtitle: "خبرات عمل في تطوير البرمجيات والأنظمة والقيادة",
+      mainField: "مجال رئيسي",
+      domain: "هندسة برمجيات وحلول رقمية",
+      practicalExp: "خبرة عملية وتطبيقية",
       roles: [
         {
           title: "مطور برمجيات",
@@ -116,7 +131,7 @@ export const translations = {
       githubRepo: "كود المصدر",
       watchVideo: "مشاهدة الفيديو",
       photoGallery: "معرض الصور",
-      mediaSelectTitle: "ماذا تريد أن تشاهد؟",
+      mediaSelectTitle: "خيارات المعاينة",
       mediaSelectSubtitle: "اختر نوع المعاينة المطلوبة للمشروع",
       tabMainImage: "الصورة الرئيسية",
       tabVideo: "فيديو المشروع",
@@ -124,7 +139,9 @@ export const translations = {
       noVideo: "لا يوجد فيديو متوفر حالياً لهذا المشروع",
       noGallery: "لا توجد صور إضافية متوفرة حالياً",
       modalTech: "التقنيات المستخدمة:",
-      modalKeyFeatures: "المميزات الرئيسية:"
+      modalKeyFeatures: "المميزات الرئيسية:",
+      photosCount: "صور",
+      videoBadge: "فيديو"
     },
     certificates: {
       title: "الشهادات",
@@ -141,7 +158,13 @@ export const translations = {
     participations: {
       title: "المشاركات",
       subtitle: "مشاركات دولية ومحلية في التبادل الثقافي والمبادرات الشبابية",
-      desc: "شاركت في العديد من البرامج المحلية والدولية التي ساهمت في تطوير مهاراتي التقنية والقيادية، بالإضافة إلى المشاركة في المبادرات الشبابية وبرامج التبادل الثقافي والعمل التطوعي."
+      desc: "شاركت في العديد من البرامج المحلية والدولية التي ساهمت في تطوير مهاراتي التقنية والقيادية، بالإضافة إلى المشاركة في المبادرات الشبابية وبرامج التبادل الثقافي والعمل التطوعي.",
+      card1Title: "مشاريع Erasmus+ الأوروبية",
+      card1Desc: "المشاركة في برامج التبادل الشبابي والثقافي وتنمية المهارات القيادية والتواصل الدولي في أوروبا.",
+      card2Title: "العمل التطوعي والمبادرات",
+      card2Desc: "التطوع في تنظيم المؤتمرات والفعاليات الشبابية وإدارة الفرق الإعلامية والتقنية بكفاءة.",
+      card3Title: "التبادل الثقافي والتطوير",
+      card3Desc: "بناء جسور التواصل بين الشباب العربي والدولي لتبادل الخبرات وتطوير المهارات التقنية الحياتية."
     },
     whyMe: {
       title: "لماذا أنا؟",
@@ -169,6 +192,7 @@ export const translations = {
     services: {
       title: "الخدمات",
       subtitle: "حلول برمجية متكاملة واحترافية تلبي تطلعاتك",
+      requestService: "طلب الخدمة",
       items: [
         { title: "تطوير مواقع إلكترونية", desc: "بناء مواقع احترافية ومتجاوبة مع مختلف الشاشات." },
         { title: "تطوير أنظمة إدارية", desc: "تصميم لوحات تحكم وأنظمة إدارة الحجوزات والعملاء والأنشطة." },
@@ -186,7 +210,12 @@ export const translations = {
     },
     gallery: {
       title: "معرض الصور",
-      subtitle: "صور التخرج، المؤتمرات، الدورات، التطوع، والجوائز"
+      subtitle: "صور التخرج، المؤتمرات، الدورات، التطوع، والجوائز",
+      catAll: "الكل",
+      catGraduation: "التخرج",
+      catConferences: "المؤتمرات",
+      catVolunteering: "التطوع",
+      catAwards: "الجوائز"
     },
     aiChatbot: {
       title: "المساعد الذكي",
@@ -206,23 +235,37 @@ export const translations = {
       subtitle: "هل لديك مشروع؟ يسعدني التعاون معك وتحويل أفكارك إلى حلول تقنية احترافية.",
       email: "البريد الإلكتروني",
       phone: "رقم الهاتف",
+      emailAction: "إرسال رسالة مباشرة",
+      whatsappTitle: "واتساب (WhatsApp)",
+      linkedinAction: "زيارة الحساب المهني",
+      githubAction: "تصفح الأكواد والمشاريع",
+      instagramAction: "زيارة الصفحة الرسمية",
+      youtubeAction: "مشاهدة القناة والفيديوهات",
+      requestService: "طلب الخدمة",
       form: {
         name: "الاسم الكامل",
         email: "البريد الإلكتروني",
         subject: "موضوع الرسالة",
         message: "تفاصيل الرسالة...",
         sendBtn: "إرسال الرسالة",
-        success: "تم إرسال الرسالة بنجاح! سيتواصل معك المهندس محمد في أقرب وقت."
+        sending: "جاري الإرسال...",
+        success: "تم إرسال الرسالة بنجاح! سيتواصل معك المهندس محمد في أقرب وقت.",
+        thankYou: "شكراً لتواصلك!",
+        defaultSubject: "رسالة جديدة من زائر موقعك الشخصي",
+        errorMessage: "حدث خطأ أثناء إرسال الرسالة، يرجى المحاولة لاحقاً",
+        networkError: "تعذر الاتصال بالخادم، يرجى التحقق من اتصال الإنترنت"
       }
     },
     cvModal: {
       title: "السيرة الذاتية (CV)",
       printBtn: "طباعة / تحميل PDF",
+      downloadPdf: "تنزيل PDF",
       closeBtn: "إغلاق"
     },
     footer: {
       rights: "© 2026 محمد طه القشار | جميع الحقوق محفوظة.",
-      backToTop: "الرجوع للأعلى"
+      backToTop: "الرجوع للأعلى",
+      name: "محمد طه القشار"
     }
   },
   en: {
@@ -239,7 +282,13 @@ export const translations = {
       gallery: "Gallery",
       contact: "Contact",
       downloadCv: "Download CV",
-      aiAssistant: "AI Assistant"
+      aiAssistant: "AI Assistant",
+      adminLogin: "Admin Login",
+      adminDashboard: "Admin Dashboard"
+    },
+    navbar: {
+      name: "Mohamed Taha Al-Qashar",
+      role: "Software Engineer"
     },
     hero: {
       badge: "Available for Hire & Projects 🚀",
@@ -250,6 +299,12 @@ export const translations = {
       btnProjects: "Explore My Work",
       btnCv: "Download CV",
       btnContact: "Get in Touch",
+      available: "Available for Work",
+      nameCard: "Mohamed Taha Al-Qashar",
+      roleCard: "Computer Engineer • Bartın University 🎓",
+      internationalPrograms: "International Programs",
+      youthExchange: "Youth Exchange",
+      communityLeader: "Community Leader",
       stats: {
         degree: "B.Sc. Computer Engineering Graduate",
         university: "Bartın University - Turkey",
@@ -310,6 +365,9 @@ export const translations = {
     experience: {
       title: "Experience",
       subtitle: "Hands-on software development and engineering expertise",
+      mainField: "Core Domain",
+      domain: "Software Engineering & Digital Solutions",
+      practicalExp: "Practical & Applied Experience",
       roles: [
         {
           title: "Software Developer",
@@ -342,7 +400,7 @@ export const translations = {
       githubRepo: "Source Code",
       watchVideo: "Watch Video",
       photoGallery: "Photo Gallery",
-      mediaSelectTitle: "What would you like to view?",
+      mediaSelectTitle: "Preview Options",
       mediaSelectSubtitle: "Choose how you'd like to preview this project",
       tabMainImage: "Main Image",
       tabVideo: "Project Video",
@@ -350,7 +408,9 @@ export const translations = {
       noVideo: "No video preview available for this project yet",
       noGallery: "No extra screenshots available for this project yet",
       modalTech: "Tech Stack:",
-      modalKeyFeatures: "Key Features:"
+      modalKeyFeatures: "Key Features:",
+      photosCount: "photos",
+      videoBadge: "Video"
     },
     certificates: {
       title: "Certificates",
@@ -367,7 +427,13 @@ export const translations = {
     participations: {
       title: "Participations",
       subtitle: "Global & local exchange programs, Erasmus+, and youth initiatives",
-      desc: "Participated in international exchange programs, leadership workshops, and youth initiatives that enriched my technical and team leadership skills."
+      desc: "Participated in international exchange programs, leadership workshops, and youth initiatives that enriched my technical and team leadership skills.",
+      card1Title: "Erasmus+ European Projects",
+      card1Desc: "Participating in youth and cultural exchange programs, leadership development, and international communication in Europe.",
+      card2Title: "Volunteering & Community Initiatives",
+      card2Desc: "Volunteering in organizing youth conferences, events, and efficiently managing media and technical teams.",
+      card3Title: "Cultural Exchange & Development",
+      card3Desc: "Building bridges between Arab and international youth to share expertise and develop life-long tech skills."
     },
     whyMe: {
       title: "Why Choose Me?",
@@ -395,6 +461,7 @@ export const translations = {
     services: {
       title: "Services",
       subtitle: "Custom software engineering services for your digital goals",
+      requestService: "Request Service",
       items: [
         { title: "Web Platform Development", desc: "Building responsive, modern, high-performance web applications." },
         { title: "Management Systems", desc: "Custom admin panels, booking systems, and operation tracking." },
@@ -412,7 +479,12 @@ export const translations = {
     },
     gallery: {
       title: "Photo Gallery",
-      subtitle: "Memories from graduation, conferences, courses, and volunteering"
+      subtitle: "Memories from graduation, conferences, courses, and volunteering",
+      catAll: "All",
+      catGraduation: "Graduation",
+      catConferences: "Conferences",
+      catVolunteering: "Volunteering",
+      catAwards: "Awards"
     },
     aiChatbot: {
       title: "AI Assistant",
@@ -432,23 +504,37 @@ export const translations = {
       subtitle: "Have a project idea? Let's turn your ideas into reality.",
       email: "Email Address",
       phone: "Phone / WhatsApp",
+      emailAction: "Send Direct Email",
+      whatsappTitle: "WhatsApp",
+      linkedinAction: "View LinkedIn Profile",
+      githubAction: "Browse Repositories",
+      instagramAction: "Visit Instagram",
+      youtubeAction: "Watch YouTube Channel",
+      requestService: "Request Service",
       form: {
         name: "Full Name",
         email: "Email Address",
         subject: "Subject",
         message: "Message...",
         sendBtn: "Send Message",
-        success: "Message sent! Eng. Mohamed will get back to you soon."
+        sending: "Sending...",
+        success: "Message sent! Eng. Mohamed will get back to you soon.",
+        thankYou: "Thank you for reaching out!",
+        defaultSubject: "New message from portfolio visitor",
+        errorMessage: "An error occurred while sending the message, please try again later",
+        networkError: "Could not connect to server, please check your internet connection"
       }
     },
     cvModal: {
-      title: "Curriculum Vitae",
+      title: "Curriculum Vitae (CV)",
       printBtn: "Print / Save PDF",
+      downloadPdf: "Download PDF",
       closeBtn: "Close"
     },
     footer: {
       rights: "© 2026 Mohamed Taha Al-Qashar | All Rights Reserved.",
-      backToTop: "Back to Top"
+      backToTop: "Back to Top",
+      name: "Mohamed Taha Al-Qashar"
     }
   },
   tr: {
@@ -465,17 +551,29 @@ export const translations = {
       gallery: "Galeri",
       contact: "İletişim",
       downloadCv: "Özgeçmiş İndir",
-      aiAssistant: "AI Asistan"
+      aiAssistant: "AI Asistan",
+      adminLogin: "Yönetici Girişi",
+      adminDashboard: "Yönetim Paneli"
+    },
+    navbar: {
+      name: "Mohamed Taha Al-Qashar",
+      role: "Yazılım Mühendisi"
     },
     hero: {
       badge: "Yeni Fırsatlar ve Projeler İçin Açık 🚀",
       greeting: "Merhaba, Ben",
       name: "Mohamed Taha Al-Qashar",
       role: "Bilgisayar Mühendisi ve Yazılım & Dijital Çözüm Geliştirici",
-      bio: "Web uygulamaları, yapay zeka sistemleri ve veritabanı geliştirmede uzmanlaşmış yazılım mühendisi.",
+      bio: "Web uygulamaları, yapay zeka sistemleri ve veritabanı geliştirmede uzmanlaşmış yazılım mühendisi. Bireylerin ve kurumların beklentilerini karşılayan çözümler üretmeyi amaçlıyorum.",
       btnProjects: "Çalışmalarımı İncele",
       btnCv: "Özgeçmiş İndir",
       btnContact: "İletişime Geç",
+      available: "Çalışmaya Hazır",
+      nameCard: "Mohamed Taha Al-Qashar",
+      roleCard: "Bilgisayar Mühendisi • Bartın Üniversitesi 🎓",
+      internationalPrograms: "Uluslararası Programlar",
+      youthExchange: "Gençlik Değişimi",
+      communityLeader: "Topluluk Lideri",
       stats: {
         degree: "Bilgisayar Mühendisliği Mezunu",
         university: "Bartın Üniversitesi - Türkiye",
@@ -489,34 +587,34 @@ export const translations = {
     about: {
       title: "Hakkımda",
       subtitle: "Yenilikçilik ve Teknik Mükemmellik Tutkusu",
-      bioText1: "Ben Mohamed Taha Al-Qashar, Bilgisayar Mühendisi ve Türkiye'deki Bartın Üniversitesi Bilgisayar Mühendisliği mezunuyum.",
-      bioText2: "Akademik ve pratik süreçlerimde web, yapay zeka ve veritabanı projeleri geliştirdim; uluslararası programlarda yer aldım.",
-      bioText3: "Her zaman kendimi geliştirmeyi ve topluma yararlı yazılımlar üretmeyi amaçlıyorum.",
+      bioText1: "Ben Mohamed Taha Al-Qashar, Bilgisayar Mühendisi ve Türkiye'deki Bartın Üniversitesi Bilgisayar Mühendisliği mezunuyum. Kodlamanın sadece sözdizimi yazmak değil, geleceği şekillendiren bir problem çözme aracı olduğuna inanıyorum.",
+      bioText2: "Akademik ve pratik süreçlerimde web, yapay zeka ve veritabanı projeleri geliştirdim; uluslararası programlarda, Erasmus+ projelerinde ve gönüllülük çalışmalarında yer aldım.",
+      bioText3: "Her zaman kendimi geliştirmeyi, en son Web ve Yapay Zeka teknolojilerini öğrenmeyi ve topluma faydalı yazılımlar üretmeyi amaçlıyorum.",
       timelineTitle: "Akademik ve Kariyer Yolculuğu",
       timeline: [
         {
           year: "2026",
           title: "Bilgisayar Mühendisliği Mezuniyeti",
           institution: "Bartın Üniversitesi - Türkiye",
-          desc: "Yapay zeka ve web sistemleri üzerine başarılı projelerle mezuniyet."
+          desc: "Yapay zeka bilgisayarlı görü ve web sistemleri üzerine seçkin bitirme projeleriyle mezuniyet."
         },
         {
           year: "2024 - 2025",
           title: "Uluslararası Programlar & Erasmus+",
           institution: "Avrupa & Orta Doğu",
-          desc: "Uluslararası değişimler ve gençlik çalıştaylarına katılım."
+          desc: "Uluslararası kültürel değişimler, liderlik ve teknik çalıştaylara katılım."
         },
         {
           year: "2023 - 2025",
           title: "Sistem ve Proje Geliştirme",
-          institution: "Serbest Zamanlı",
-          desc: "40'tan fazla proje geliştirme."
+          institution: "Serbest Zamanlı ve Projeler",
+          desc: "Düğün salonu rezervasyon sistemi, akıllı yapay zeka devam takip sistemi dahil 40'tan fazla proje geliştirme."
         },
         {
           year: "2021 - 2023",
           title: "Liderlik ve Gönüllülük",
           institution: "Gençlik Örgütleri",
-          desc: "Teknik ve medya ekiplerine liderlik."
+          desc: "Çok kültürlü etkinlikler düzenleme, teknik ve medya ekiplerine liderlik etme."
         }
       ]
     },
@@ -536,26 +634,29 @@ export const translations = {
     experience: {
       title: "Deneyimler",
       subtitle: "Yazılım ve sistem geliştirme alanındaki tecrübelerim",
+      mainField: "Ana Alan",
+      domain: "Yazılım Mühendisliği ve Dijital Çözümler",
+      practicalExp: "Pratik ve Uygulamalı Deneyim",
       roles: [
         {
           title: "Yazılım Geliştirici",
           icon: "Code2",
-          desc: "Web sistemleri, yönetim panelleri ve veritabanı uygulamaları tasarlama."
+          desc: "Web sistemleri, yönetim panelleri, rezervasyon sistemleri ve veritabanı uygulamaları tasarlama ve geliştirme."
         },
         {
           title: "Full Stack Geliştirici",
           icon: "Layers",
-          desc: "Arayüz ve REST API entegrasyonu."
+          desc: "Kullanıcı dostu arayüzler ve güvenli, hızlı RESTful API servisleri geliştirme ve entegrasyonu."
         },
         {
           title: "Veritabanı Geliştirici",
           icon: "Database",
-          desc: "Veritabanı tasarımı ve sorgu optimizasyonu."
+          desc: "Veritabanı şeması tasarımı, karmaşık SQL sorgu optimizasyonu ve veri yönetimi."
         },
         {
           title: "Gönüllü ve Takım Lideri",
           icon: "Users",
-          desc: "Gençlik etkinlikleri ve medya organizasyonu."
+          desc: "Uluslararası gençlik etkinlikleri düzenleme, çok kültürlü ekipleri yönetme ve teknik faaliyetleri koordine etme."
         }
       ]
     },
@@ -568,15 +669,17 @@ export const translations = {
       githubRepo: "Kaynak Kodu",
       watchVideo: "Videoyu İzle",
       photoGallery: "Fotoğraf Galerisi",
-      mediaSelectTitle: "Neyi görüntülemek istersiniz?",
+      mediaSelectTitle: "Önizleme Seçenekleri",
       mediaSelectSubtitle: "Proje önizleme türünü seçiniz",
       tabMainImage: "Ana Görsel",
       tabVideo: "Proje Videosu",
       tabGallery: "Ekran Görüntüleri",
       noVideo: "Bu proje için henüz video bulunmamaktadır",
       noGallery: "Bu proje için henüz ek ekran görüntüsü bulunmamaktadır",
-      modalTech: "Teknolojiler:",
-      modalKeyFeatures: "Özellikler:"
+      modalTech: "Kullanılan Teknolojiler:",
+      modalKeyFeatures: "Temel Özellikler:",
+      photosCount: "fotoğraf",
+      videoBadge: "Video"
     },
     certificates: {
       title: "Sertifikalar",
@@ -593,31 +696,38 @@ export const translations = {
     participations: {
       title: "Katılımlar",
       subtitle: "Uluslararası değişimler ve Erasmus+ projeleri",
-      desc: "Teknik ve liderlik becerilerimi artıran uluslararası değişim programlarına katıldım."
+      desc: "Teknik ve liderlik becerilerimi artıran uluslararası değişim programlarına, gençlik çalıştaylarına ve gönüllü projelere katıldım.",
+      card1Title: "Erasmus+ Avrupa Projeleri",
+      card1Desc: "Avrupa'da gençlik ve kültürel değişim programları, liderlik ve uluslararası iletişim becerilerinin geliştirilmesi.",
+      card2Title: "Gönüllülük ve Gençlik Girişimleri",
+      card2Desc: "Gençlik konferansları ve etkinlikleri düzenleme, medya ve teknik ekipleri etkin bir şekilde yönetme.",
+      card3Title: "Kültürel Değişim ve Gelişim",
+      card3Desc: "Arap ve uluslararası gençler arasında köprüler kurarak deneyim paylaşımı ve yaşam boyu teknik beceriler geliştirme."
     },
     whyMe: {
       title: "Neden Ben?",
       subtitle: "Teknik bilgi, yaratıcılık ve özveri",
-      desc: "Gerçek başarı teknik bilgi ve etkili iş birliğinden gelir.",
+      desc: "Gerçek başarı teknik bilgi, yaratıcı problem çözme ve ekip çalışmasının bir araya gelmesiyle elde edilir. Değer katan yüksek kaliteli yazılımlar üretmeye odaklanıyorum.",
       cards: [
-        { title: "Kapsamlı Yetenekler", desc: "Frontend, Backend, Veritabanı ve Yapay Zeka." },
-        { title: "Özel Çözümler", desc: "Proje ihtiyaçlarına tam uygun sistemler." },
-        { title: "Kalite & Güvenlik", desc: "Temiz kod ve veri güvenliği." },
-        { title: "Liderlik ve İletişim", desc: "Güçlü takım çalışması ve uyum." }
+        { title: "Kapsamlı Yetenekler", desc: "Frontend, Backend, Veritabanı ve Yapay Zeka alanlarında dengeli uzmanlık." },
+        { title: "Özel Çözümler", desc: "Proje gereksinimlerine tam uygun, etki yaratan sistemler." },
+        { title: "Kalite & Güvenlik", desc: "Temiz kod standartları, yüksek performans ve veri güvenliği." },
+        { title: "Liderlik ve İletişim", desc: "Güçlü takım çalışması, uyum ve çok kültürlü iletişim deneyimi." }
       ]
     },
     services: {
       title: "Hizmetler",
       subtitle: "Profesyonel yazılım çözümleri",
+      requestService: "Hizmet Talep Et",
       items: [
-        { title: "Web Geliştirme", desc: "Hızlı ve modern web siteleri." },
-        { title: "Yönetim Sistemleri", desc: "Özel yönetim ve takip panelleri." },
-        { title: "API Geliştirme", desc: "Güvenli RESTful API'ler." },
-        { title: "Veritabanı Tasarımı", desc: "Veritabanı mimarisi ve optimizasyonu." },
-        { title: "Özel Uygulamalar", desc: "İş süreçlerinize özel yazılımlar." },
-        { title: "Yapay Zeka Çözümleri", desc: "OpenCV ve YOLO tabanlı akıllı sistemler." },
-        { title: "Teknik Danışmanlık", desc: "Mimariler ve teknoloji seçim rehberliği." },
-        { title: "Sistem Bakımı", desc: "Yazılım bakım ve güncelleme desteği." }
+        { title: "Web Geliştirme", desc: "Hızlı, modern ve duyarlı web siteleri ve platformlar." },
+        { title: "Yönetim Sistemleri", desc: "Özel yönetim, rezervasyon ve müşteri takip panelleri." },
+        { title: "API Geliştirme", desc: "FastAPI, ASP.NET ve Node.js ile güvenli, hızlı RESTful API'ler." },
+        { title: "Veritabanı Tasarımı", desc: "Veritabanı mimarisi, şema tasarımı ve sorgu optimizasyonu." },
+        { title: "Özel Uygulamalar", desc: "İş süreçlerinize özel geliştirilmiş yazılım çözümleri." },
+        { title: "Yapay Zeka Çözümleri", desc: "OpenCV, YOLO ve makine öğrenimi tabanlı akıllı sistemler." },
+        { title: "Teknik Danışmanlık", desc: "Mimari kararlar ve doğru teknoloji seçim rehberliği." },
+        { title: "Sistem Bakımı", desc: "Mevcut yazılımların bakımı, güncellenmesi ve güvenliği." }
       ]
     },
     testimonials: {
@@ -626,7 +736,12 @@ export const translations = {
     },
     gallery: {
       title: "Galeri",
-      subtitle: "Mezuniyet, konferans ve etkinlik fotoğrafları"
+      subtitle: "Mezuniyet, konferans, kurs ve gönüllülük fotoğrafları",
+      catAll: "Tümü",
+      catGraduation: "Mezuniyet",
+      catConferences: "Konferanslar",
+      catVolunteering: "Gönüllülük",
+      catAwards: "Ödüller"
     },
     aiChatbot: {
       title: "AI Asistan",
@@ -643,26 +758,40 @@ export const translations = {
     },
     contact: {
       title: "İletişim",
-      subtitle: "Bir projeniz mi var? İletişime geçin.",
-      email: "E-posta",
-      phone: "Telefon",
+      subtitle: "Bir projeniz mi var? İletişime geçin, fikirlerinizi hayata geçirelim.",
+      email: "E-posta Adresi",
+      phone: "Telefon / WhatsApp",
+      emailAction: "Doğrudan E-posta Gönder",
+      whatsappTitle: "WhatsApp",
+      linkedinAction: "LinkedIn Profilini Gör",
+      githubAction: "Kodları ve Projeleri İncele",
+      instagramAction: "Instagram Sayfasını Gör",
+      youtubeAction: "YouTube Kanalını İzle",
+      requestService: "Hizmet Talep Et",
       form: {
-        name: "Adınız",
-        email: "E-posta",
+        name: "Adınız Soyadınız",
+        email: "E-posta Adresiniz",
         subject: "Konu",
-        message: "Mesaj...",
+        message: "Mesajınız...",
         sendBtn: "Mesaj Gönder",
-        success: "Mesajınız gönderildi!"
+        sending: "Gönderiliyor...",
+        success: "Mesajınız başarıyla gönderildi! Müh. Mohamed en kısa sürede sizinle iletişime geçecektir.",
+        thankYou: "İletişime geçtiğiniz için teşekkürler!",
+        defaultSubject: "Kişisel web sitesi ziyaretçisinden yeni mesaj",
+        errorMessage: "Mesaj gönderilirken bir hata oluştu, lütfen daha sonra tekrar deneyiniz",
+        networkError: "Sunucuya bağlanılamadı, lütfen internet bağlantınızı kontrol ediniz"
       }
     },
     cvModal: {
-      title: "Özgeçmiş",
+      title: "Özgeçmiş (CV)",
       printBtn: "Yazdır / PDF Kaydet",
+      downloadPdf: "PDF İndir",
       closeBtn: "Kapat"
     },
     footer: {
       rights: "© 2026 Mohamed Taha Al-Qashar | Tüm Hakları Saklıdır.",
-      backToTop: "Yukarı Dön"
+      backToTop: "Yukarı Dön",
+      name: "Mohamed Taha Al-Qashar"
     }
   }
 };

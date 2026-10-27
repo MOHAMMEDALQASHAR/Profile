@@ -54,7 +54,7 @@ export default function Services({ t }) {
                 <div className="mt-3 sm:mt-6 pt-2 sm:pt-3 border-t border-slate-700/30 flex items-center justify-between text-[10px] sm:text-xs font-bold text-sky-400">
                   <a href="#contact" className="hover:underline flex items-center gap-1">
                     <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                    <span>طلب الخدمة</span>
+                    <span>{t.services.requestService || t.contact.requestService || 'طلب الخدمة'}</span>
                   </a>
                 </div>
               </div>

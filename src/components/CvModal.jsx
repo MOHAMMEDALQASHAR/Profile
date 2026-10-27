@@ -31,7 +31,7 @@ export default function CvModal({ isOpen, onClose, t, lang }) {
           <div className="flex items-center gap-2">
             <GraduationCap className="w-5 h-5 text-sky-400 shrink-0" />
             <h3 className="font-bold text-white text-sm sm:text-base truncate">
-              {t.cvModal.title} - {bioInfo?.name || 'Mohamed Taha Al-Qashar'}
+              {t.cvModal.title} - {lang === 'ar' ? (bioInfo?.name || t.hero.name) : t.hero.name}
             </h3>
           </div>
 
@@ -42,7 +42,7 @@ export default function CvModal({ isOpen, onClose, t, lang }) {
                 className="flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-xs shadow-md hover:from-emerald-400 hover:to-teal-500 transition-all"
               >
                 <Download className="w-4 h-4 animate-bounce" />
-                <span>تنزيل PDF</span>
+                <span>{t.cvModal.downloadPdf || 'تنزيل PDF'}</span>
               </button>
             )}
 

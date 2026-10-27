@@ -7,11 +7,11 @@ export default function PhotoGallery({ t, lang }) {
   const [lightboxImg, setLightboxImg] = useState(null);
 
   const allCategories = [
-    { key: 'all', label: 'الكل' },
-    { key: 'graduation', label: 'التخرج' },
-    { key: 'conferences', label: 'المؤتمرات' },
-    { key: 'volunteering', label: 'التطوع' },
-    { key: 'awards', label: 'الجوائز' }
+    { key: 'all', label: t.gallery.catAll || 'الكل' },
+    { key: 'graduation', label: t.gallery.catGraduation || 'التخرج' },
+    { key: 'conferences', label: t.gallery.catConferences || 'المؤتمرات' },
+    { key: 'volunteering', label: t.gallery.catVolunteering || 'التطوع' },
+    { key: 'awards', label: t.gallery.catAwards || 'الجوائز' }
   ];
 
   const categories = allCategories.filter(cat => cat.key === 'all' || galleryData.some(g => g.category === cat.key));
