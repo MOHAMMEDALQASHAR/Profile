@@ -51,32 +51,32 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
   ];
 
   const languages = [
-    { code: 'ar', label: 'العربية 🇸🇦' },
-    { code: 'en', label: 'English 🇬🇧' },
-    { code: 'tr', label: 'Türkçe 🇹🇷' },
+    { code: 'ar', label: 'العربية 🇸🇦', flag: '🇸🇦', short: 'عربي' },
+    { code: 'en', label: 'English 🇬🇧', flag: '🇬🇧', short: 'EN' },
+    { code: 'tr', label: 'Türkçe 🇹🇷', flag: '🇹🇷', short: 'TR' },
   ];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'py-3 bg-slate-950/80 dark:bg-slate-950/85 bg-white/85 backdrop-blur-xl border-b border-slate-700/30 shadow-lg' 
-        : 'py-5 bg-transparent'
+        ? 'py-2.5 sm:py-3 bg-slate-950/85 dark:bg-slate-950/90 bg-white/90 backdrop-blur-xl border-b border-slate-700/30 shadow-lg' 
+        : 'py-3 sm:py-5 bg-slate-950/50 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none border-b border-slate-800/40 sm:border-b-0'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-2">
           
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-purple-600 p-0.5 shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform duration-300">
-              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-sky-400 font-bold text-lg">
-                <Code2 className="w-5 h-5 text-sky-400" />
+          <a href="#home" className="flex items-center gap-2 group min-w-0 shrink">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-purple-600 p-0.5 shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform duration-300 shrink-0">
+              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-sky-400 font-bold text-base sm:text-lg">
+                <Code2 className="w-4 h-4 sm:w-5 sm:h-5 text-sky-400" />
               </div>
             </div>
-            <div className="flex flex-col">
-              <span className="font-extrabold text-lg tracking-tight gradient-text leading-tight">
+            <div className="flex flex-col min-w-0">
+              <span className="font-extrabold text-xs sm:text-lg tracking-tight gradient-text leading-tight truncate">
                 {t.navbar?.name || t.hero?.name || "Mohamed Taha Al-Qashar"}
               </span>
-              <span className="text-[10px] text-slate-400 dark:text-slate-400 font-medium">
+              <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-400 font-medium truncate">
                 {t.navbar?.role || "Software Engineer"}
               </span>
             </div>
@@ -95,9 +95,28 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
             ))}
           </nav>
 
-          {/* Right Action Icons & Buttons */}
+          {/* Right Action Icons & Buttons for Desktop */}
           <div className="hidden sm:flex items-center gap-2.5">
             
+            {/* Prominent Language Switcher Pill */}
+            <div className="flex items-center bg-slate-900/90 dark:bg-slate-900/90 p-1 rounded-full border border-sky-500/40 shadow-md">
+              {languages.map((l) => (
+                <button
+                  key={l.code}
+                  onClick={() => setLang(l.code)}
+                  className={`px-3 py-1 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 ${
+                    lang === l.code
+                      ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/30 scale-105'
+                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                  }`}
+                  title={l.label}
+                >
+                  <span className="text-sm">{l.flag}</span>
+                  <span className="font-extrabold">{l.short}</span>
+                </button>
+              ))}
+            </div>
+
             {/* Admin Panel Button */}
             <button
               onClick={openAdmin}
@@ -111,37 +130,6 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
               <Lock className="w-3.5 h-3.5 text-amber-400" />
               <span>{isAdminLoggedIn ? (t.nav.adminDashboard || 'لوحة التحكم') : (t.nav.adminLogin || 'دخول الأدمن')}</span>
             </button>
-
-            {/* Language Switcher Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-slate-800/40 dark:bg-slate-800/50 border border-slate-700/40 text-slate-300 text-xs font-semibold hover:border-sky-500/40 transition-all"
-              >
-                <Globe className="w-3.5 h-3.5 text-sky-400" />
-                <span className="uppercase">{lang}</span>
-                <ChevronDown className="w-3 h-3 text-slate-400" />
-              </button>
-
-              {langMenuOpen && (
-                <div className="absolute right-0 mt-2 w-36 py-1 bg-slate-900 dark:bg-slate-900 bg-white rounded-xl shadow-xl border border-slate-700/40 z-50">
-                  {languages.map((l) => (
-                    <button
-                      key={l.code}
-                      onClick={() => {
-                        setLang(l.code);
-                        setLangMenuOpen(false);
-                      }}
-                      className={`w-full text-right dir-rtl px-3 py-2 text-xs font-medium flex items-center justify-between hover:bg-sky-500/10 hover:text-sky-400 transition-colors ${
-                        lang === l.code ? 'text-sky-400 font-bold bg-sky-500/10' : 'text-slate-300 dark:text-slate-300 text-slate-700'
-                      }`}
-                    >
-                      <span>{l.label}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
 
             {/* Theme Toggle */}
             <button
@@ -162,20 +150,34 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex sm:hidden items-center gap-2">
-            <button
-              onClick={openAdmin}
-              className="p-2 rounded-full bg-slate-800/60 border border-slate-700/40 text-amber-400"
-            >
-              <Lock className="w-4 h-4" />
-            </button>
+          {/* Mobile Right Controls: Prominent Language Switcher + Menu */}
+          <div className="flex sm:hidden items-center gap-1.5 shrink-0">
+            {/* Prominent Language Switcher on Mobile (Always visible at the top) */}
+            <div className="flex items-center bg-slate-900/95 dark:bg-slate-900/95 border border-sky-500/50 p-0.5 rounded-xl shadow-lg shadow-sky-500/10">
+              {languages.map((l) => (
+                <button
+                  key={l.code}
+                  onClick={() => setLang(l.code)}
+                  className={`px-2 py-1 rounded-lg text-[11px] font-extrabold transition-all flex items-center gap-1 ${
+                    lang === l.code
+                      ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-sm scale-105'
+                      : 'text-slate-400 hover:text-white'
+                  }`}
+                  title={l.label}
+                >
+                  <span className="text-xs">{l.flag}</span>
+                  <span className="uppercase text-[10px]">{l.code}</span>
+                </button>
+              ))}
+            </div>
 
+            {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl bg-slate-800/60 border border-slate-700/40 text-slate-200"
+              className="p-1.5 rounded-xl bg-slate-800/80 border border-slate-700/50 text-slate-200 hover:text-white hover:bg-slate-700 transition-all shrink-0"
+              aria-label="Toggle Menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
 
@@ -210,7 +212,7 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
               </button>
 
               <div className="flex items-center justify-between">
-                <span className="text-xs text-slate-400">Language:</span>
+                <span className="text-xs text-slate-400 font-bold">{lang === 'ar' ? 'اللغة' : lang === 'tr' ? 'Dil' : 'Language'}:</span>
                 <div className="flex gap-1.5">
                   {languages.map((l) => (
                     <button
@@ -219,18 +221,19 @@ export default function Navbar({ lang, setLang, theme, toggleTheme, t, openCvMod
                         setLang(l.code);
                         setMobileMenuOpen(false);
                       }}
-                      className={`px-2.5 py-1 rounded-md text-xs font-bold ${
-                        lang === l.code ? 'bg-sky-500 text-white' : 'bg-slate-800 text-slate-300'
+                      className={`px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all ${
+                        lang === l.code ? 'bg-sky-500 text-white shadow-md' : 'bg-slate-800 text-slate-300'
                       }`}
                     >
-                      {l.code.toUpperCase()}
+                      <span>{l.flag}</span>
+                      <span>{l.short}</span>
                     </button>
                   ))}
                 </div>
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-xs text-slate-400">Theme:</span>
+                <span className="text-xs text-slate-400 font-bold">{lang === 'ar' ? 'المظهر' : lang === 'tr' ? 'Tema' : 'Theme'}:</span>
                 <button
                   onClick={toggleTheme}
                   className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800 text-xs text-slate-200"
